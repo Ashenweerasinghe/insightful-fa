@@ -1,0 +1,179 @@
+/*
+ * Design tokens — the visual source of truth.
+ * Transcribed exactly from
+ * docs/get-started/design_token_theming_system_insightful_fa.md.
+ *
+ * Layer 1 (raw primitives) -> Layer 2 (semantic). Components consume the
+ * semantic layer; raw primitives are not used directly in components.
+ * The Tailwind @theme surface that maps these into utilities lives in
+ * globals.css (CSS-first, per DEC-016).
+ */
+:root {
+  /* ---------- Raw color primitives (Layer 1) ---------- */
+
+  /* Background — warm bone */
+  --color-bone-50: #fbf7ef;
+  --color-bone-100: #f7f2e8;
+  --color-bone-200: #efe7d8;
+
+  /* Ink — deep charcoal green-black */
+  --color-ink-900: #171b19;
+  --color-ink-800: #1f2522;
+  --color-ink-700: #2a312d;
+
+  /* Neutral — olive gray. olive-500 darkened from the spec's #6d716d to clear
+     WCAG AA (4.5:1) for small secondary text on the bone background; see DEC-031. */
+  --color-olive-500: #676b67;
+  --color-olive-400: #848883;
+  --color-olive-300: #a2a6a1;
+
+  /* Accent */
+  --color-amber-500: #b87937;
+  --color-rust-500: #d9793f;
+  --color-forest-600: #314438;
+  --color-warning-500: #b45a4d;
+
+  /* ---------- Semantic color (Layer 2) ---------- */
+
+  /* Background */
+  --background-primary: var(--color-bone-100);
+  --background-secondary: var(--color-bone-50);
+  --background-dark: var(--color-ink-900);
+  --background-elevated: rgba(255, 255, 255, 0.45);
+
+  /* Text */
+  --text-primary: var(--color-ink-800);
+  --text-secondary: var(--color-olive-500);
+  --text-muted: var(--color-olive-400);
+  --text-inverse: var(--color-bone-50);
+
+  /* Border */
+  --border-subtle: rgba(31, 37, 34, 0.1);
+  --border-default: rgba(31, 37, 34, 0.16);
+  --border-strong: rgba(31, 37, 34, 0.24);
+
+  /* Surface */
+  --surface-card: rgba(255, 255, 255, 0.42);
+  --surface-overlay: rgba(255, 255, 255, 0.6);
+  --surface-dark: rgba(23, 27, 25, 0.92);
+
+  /* Signal */
+  --signal-warning: var(--color-warning-500);
+  --signal-focus: var(--color-amber-500);
+  --signal-success: var(--color-forest-600);
+
+  /* ---------- Typography: font families ---------- */
+  /* Built on the next/font source variables set on <html> (app/layout.tsx). */
+  --font-serif: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-public-sans), Inter, system-ui, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, monospace;
+
+  /* ---------- Typography: scale ---------- */
+
+  /* Display */
+  --text-display-xl: 5rem;
+  --text-display-lg: 4rem;
+  --text-display-md: 3rem;
+
+  /* Heading */
+  --text-heading-xl: 3rem;
+  --text-heading-lg: 2.5rem;
+  --text-heading-md: 2rem;
+
+  /* Body */
+  --text-body-lg: 1.125rem;
+  --text-body-md: 1rem;
+  --text-body-sm: 0.9375rem;
+
+  /* Metadata */
+  --text-meta-lg: 0.875rem;
+  --text-meta-md: 0.75rem;
+  --text-meta-sm: 0.6875rem;
+
+  /* ---------- Typography: line-height ---------- */
+  --leading-tight: 0.95;
+  --leading-heading: 1.05;
+  --leading-body: 1.7;
+  --leading-relaxed: 1.9;
+
+  /* ---------- Typography: letter-spacing ---------- */
+  --tracking-tight: 0;
+  --tracking-heading: 0;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+
+  /* ---------- Spacing scale ---------- */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 128px;
+  --space-5xl: 180px;
+
+  /* ---------- Section spacing ---------- */
+  --section-space-sm: 96px;
+  --section-space-md: 128px;
+  --section-space-lg: 180px;
+
+  /* ---------- Layout: container widths ---------- */
+  --container-narrow: 720px;
+  --container-default: 1200px;
+  --container-wide: 1440px;
+
+  /* ---------- Layout: grid gaps ---------- */
+  --grid-gap-sm: 24px;
+  --grid-gap-md: 32px;
+  --grid-gap-lg: 48px;
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* ---------- Shadow ---------- */
+  --shadow-soft: 0 12px 32px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 18px 48px rgba(0, 0, 0, 0.08);
+  --shadow-overlay: 0 24px 64px rgba(0, 0, 0, 0.12);
+
+  /* ---------- Motion: duration ---------- */
+  --transition-fast: 160ms;
+  --transition-medium: 320ms;
+  --transition-slow: 700ms;
+  --transition-atmospheric: 3000ms;
+
+  /* ---------- Motion: easing ---------- */
+  --ease-default: ease;
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ---------- Z-index ---------- */
+  --z-base: 0;
+  --z-content: 10;
+  --z-overlay: 20;
+  --z-navigation: 30;
+  --z-modal: 40;
+
+  /* ---------- Texture / atmosphere ---------- */
+  --texture-grain-opacity: 0.04;
+  --texture-paper-opacity: 0.06;
+
+  /* ---------- Component tokens (Layer 3, used sparingly) ---------- */
+
+  /* Button */
+  --button-height: 48px;
+  --button-padding-x: 24px;
+  --button-radius: var(--radius-md);
+
+  /* Card */
+  --card-padding: var(--space-xl);
+  --card-radius: var(--radius-lg);
+  --card-border: var(--border-subtle);
+
+  /* Hero */
+  --hero-max-width: 10ch;
+  --hero-spacing: var(--space-2xl);
+}

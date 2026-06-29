@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./typography.css";
+
+/*
+ * Global base styles + the Tailwind @theme surface (CSS-first, per DEC-016).
+ * Every design value lives as a CSS variable in tokens.css; @theme inline maps
+ * the semantic layer into Tailwind utilities without duplicating the source
+ * (the same mechanism Phase 0 used for the brand fonts).
+ */
+@theme inline {
+  /* Fonts */
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Semantic colors -> bg-*, text-*, border-*, etc.
+     Only the semantic layer is surfaced; raw primitives stay internal. */
+  --color-background-primary: var(--background-primary);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-dark: var(--background-dark);
+  --color-background-elevated: var(--background-elevated);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-default: var(--border-default);
+  --color-border-strong: var(--border-strong);
+
+  --color-surface-card: var(--surface-card);
+  --color-surface-overlay: var(--surface-overlay);
+  --color-surface-dark: var(--surface-dark);
+
+  --color-signal-warning: var(--signal-warning);
+  --color-signal-focus: var(--signal-focus);
+  --color-signal-success: var(--signal-success);
+
+  /* NOTE: the spacing scale is intentionally NOT registered in Tailwind's
+     "spacing" theme namespace. In Tailwind v4 the t-shirt sizes for the max-w,
+     w and min-w utilities read the "container" scale; named spacing keys
+     (sm, md, lg, xl, 2xl, and so on) would shadow them — e.g. max-w-2xl would
+     resolve to --space-2xl (64px). Primitives instead consume the raw --space-
+     and --section-space- tokens via Tailwind's var() value syntax, for example
+     gap-[var(--space-md)]. See DEC-026. */
+
+  /* Radius -> rounded-* */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  /* Shadow -> shadow-* */
+  --shadow-soft: var(--shadow-soft);
+  --shadow-medium: var(--shadow-medium);
+  --shadow-overlay: var(--shadow-overlay);
+
+  /* Container widths -> max-w-narrow / max-w-default / max-w-wide */
+  --container-narrow: var(--container-narrow);
+  --container-default: var(--container-default);
+  --container-wide: var(--container-wide);
+
+  /* Type scale -> text-display-xl … text-meta-sm (font-size only) */
+  --text-display-xl: var(--text-display-xl);
+  --text-display-lg: var(--text-display-lg);
+  --text-display-md: var(--text-display-md);
+  --text-heading-xl: var(--text-heading-xl);
+  --text-heading-lg: var(--text-heading-lg);
+  --text-heading-md: var(--text-heading-md);
+  --text-body-lg: var(--text-body-lg);
+  --text-body-md: var(--text-body-md);
+  --text-body-sm: var(--text-body-sm);
+  --text-meta-lg: var(--text-meta-lg);
+  --text-meta-md: var(--text-meta-md);
+  --text-meta-sm: var(--text-meta-sm);
+
+  /* Line-height and letter-spacing are applied through the typography classes
+     in typography.css (raw var(--leading-x) / var(--tracking-x)); they are not
+     surfaced as Tailwind leading or tracking utilities because several names
+     (e.g. leading-tight, tracking-wide) would shadow Tailwind's own defaults. */
+}
+
+@layer base {
+  body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: var(--leading-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/*
+ * Hero image load-in (DEC-065). The hero illustration is the one above-the-fold
+ * image that is NOT wrapped in <Reveal> (DEC-027/032: Reveal SSRs opacity:0 and
+ * the hero image is the LCP element). A CSS keyframe is used instead of a JS/
+ * Framer Motion fade so the animation runs at first paint — never gated on
+ * hydration — and animation-fill-mode keeps the end state visible if JS never
+ * runs. Opacity-only by design: the image animates alone beside static copy, so
+ * a fade-up drift would read as a layout shift (see the image-motion principle
+ * in DEC-065). prefers-reduced-motion removes it cleanly (opacity defaults to 1).
+ */
+@keyframes hero-image-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-image-fade {
+  animation: hero-image-in var(--transition-slow) var(--ease-soft) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image-fade {
+    animation: none;
+  }
+}

@@ -1,0 +1,131 @@
+/*
+ * Centralized typography. Every editorial type treatment is defined here as a
+ * token-driven class so font styling is never scattered across components.
+ * The text primitives in components/typography apply these classes.
+ *
+ * Defined in the `components` layer so consumer-passed Tailwind utilities
+ * (e.g. a color or size override) still win.
+ */
+@layer components {
+  /* ---------- Display: serif, largest editorial headline scale ---------- */
+  .t-display-xl {
+    font-family: var(--font-serif);
+    font-size: var(--text-display-xl);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 400;
+  }
+  .t-display-lg {
+    font-family: var(--font-serif);
+    font-size: var(--text-display-lg);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 400;
+  }
+  .t-display-md {
+    font-family: var(--font-serif);
+    font-size: var(--text-display-md);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 400;
+  }
+
+  /* ---------- Heading: serif section headlines ---------- */
+  .t-heading-xl {
+    font-family: var(--font-serif);
+    font-size: var(--text-heading-xl);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 400;
+  }
+  .t-heading-lg {
+    font-family: var(--font-serif);
+    font-size: var(--text-heading-lg);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 400;
+  }
+  .t-heading-md {
+    font-family: var(--font-serif);
+    font-size: var(--text-heading-md);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 400;
+  }
+
+  /* ---------- Body: sans narrative copy ---------- */
+  .t-body-lg {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-lg);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-normal);
+    font-weight: 400;
+  }
+  .t-body-md {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-md);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-normal);
+    font-weight: 400;
+  }
+  .t-body-sm {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-normal);
+    font-weight: 400;
+  }
+
+  /* ---------- Eyebrow: mono, uppercase, wide-tracking label ---------- */
+  .t-eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-meta-md);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  /* ---------- Meta: mono metadata / annotations ---------- */
+  .t-meta-lg {
+    font-family: var(--font-mono);
+    font-size: var(--text-meta-lg);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-wide);
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+  .t-meta-md {
+    font-family: var(--font-mono);
+    font-size: var(--text-meta-md);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-wide);
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+  .t-meta-sm {
+    font-family: var(--font-mono);
+    font-size: var(--text-meta-sm);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-wide);
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  /* ---------- Article body: long-form reading rhythm for MDX content ---------- */
+  /* Token-driven vertical rhythm between MDX block elements; headings get more
+     room above them, and the first block never adds a leading gap. */
+  .article-body > * + * {
+    margin-top: var(--space-md);
+  }
+  .article-body > h2 {
+    margin-top: var(--space-2xl);
+  }
+  .article-body > h3 {
+    margin-top: var(--space-xl);
+  }
+  .article-body > :first-child {
+    margin-top: 0;
+  }
+}

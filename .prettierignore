@@ -1,0 +1,16 @@
+# Build output & dependencies
+node_modules
+.next
+out
+build
+next-env.d.ts
+
+# Generated / lockfiles
+package-lock.json
+
+# Hand-authored docs (docs/get-started is read-only) — never reformat.
+docs/
+*.md
+
+# Local, machine-specific harness settings (git-ignored; not ours to format)
+.claude/settings.local.json

@@ -1,0 +1,5 @@
+# Normalize line endings: store LF in the repo and check out LF in working
+# trees on every platform. Keeps Prettier (endOfLine: lf) and the
+# format:check gate stable on Windows, where core.autocrlf would otherwise
+# produce CRLF working copies. Binary files are auto-detected and left alone.
+* text=auto eol=lf
