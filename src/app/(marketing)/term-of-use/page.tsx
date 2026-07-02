@@ -14,7 +14,16 @@ export const metadata: Metadata = {
   },
 };
 
-const termsSections = [
+interface TermSection {
+  title: string;
+  body: readonly string[];
+  bullets?: readonly string[];
+  extraTitle?: string;
+  extraBullets?: readonly string[];
+  bodyTail?: string | readonly string[];
+}
+
+const termsSections: readonly TermSection[] = [
   {
     title: "1. Use of Our Website",
     body: [
@@ -111,9 +120,9 @@ const termsSections = [
       "Website: https://insightfulfa.com",
     ],
   },
-] as const;
+];
 
-const privacySections = [
+const privacySections: readonly TermSection[] = [
   {
     title: "1. How We Use Your Information",
     body: ["We use your information to:"],
@@ -166,7 +175,7 @@ const privacySections = [
       "Website: https://insightfulfa.com",
     ],
   },
-] as const;
+];
 
 function renderParagraphs(lines: readonly string[]) {
   return lines.map((line) => (
