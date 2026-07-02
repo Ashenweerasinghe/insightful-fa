@@ -4,14 +4,14 @@ export interface NavItem {
 }
 
 /**
- * Primary navigation — the five v1 pages (DEC-014). Single source of truth
+ * Primary navigation — the core site pages (DEC-014). Single source of truth
  * shared by the Navbar, the MobileMenu, and the Footer navigation column.
  */
 export const NAV_ITEMS: readonly NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Framework", href: "/framework" },
   { label: "About", href: "/about" },
-  { label: "Resources", href: "/resources" },
+  { label: "Term of use", href: "/term-of-use" },
   { label: "Contact", href: "/contact" },
 ];
 

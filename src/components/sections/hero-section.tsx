@@ -1,7 +1,6 @@
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
-import { EyebrowLabel } from "@/components/typography/eyebrow-label";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
 import { Button } from "@/components/ui/button";
@@ -26,7 +25,6 @@ export function HeroSection() {
       <Container width="wide">
         <div className="grid grid-cols-1 items-center gap-[var(--space-xl)] md:grid-cols-[0.7fr_1.3fr]">
           <Stack gap="lg">
-            <EyebrowLabel>Operational intelligence</EyebrowLabel>
             <Heading
               level={1}
               size="display-lg"
@@ -35,11 +33,20 @@ export function HeroSection() {
               See the bear?
             </Heading>
             <Text size="body-lg" className="text-text-secondary">
-              Most businesses don&rsquo;t, until it&rsquo;s already in the
-              numbers. The risks that cost you most grow quietly, deep in the
-              operations your reporting can&rsquo;t see. Insightful Financial
-              Analytics helps you spot them while there&rsquo;s still time to
-              act.
+              <strong className="text-text-primary">
+                Most businesses don&rsquo;t&hellip; until it&rsquo;s too late.
+              </strong>
+              <br />
+              <strong className="text-text-primary">So who is this bear?</strong>
+              <br />
+              <br />
+              It&rsquo;s the month-end report. The one that tells you you missed
+              your targets - revenue dropped, costs increased, profits
+              didn&rsquo;t land. And then comes the hard part. You&rsquo;re
+              responsible for the numbers.
+              <br />
+              <br />
+              Now you have to explain why you missed them.
             </Text>
             <CTAGroup>
               <Button href="/contact">Book a consultation</Button>

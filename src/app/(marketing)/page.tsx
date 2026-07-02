@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProblemSection } from "@/components/sections/problem-section";
+import { ExplainSection } from "@/components/sections/explain-section";
 import { FrameworkSection } from "@/components/sections/framework-section";
 import { OutcomesSection } from "@/components/sections/outcomes-section";
-import { DifferentiatorsSection } from "@/components/sections/differentiators-section";
 import { CredibilitySection } from "@/components/sections/credibility-section";
 
 export const metadata: Metadata = {
@@ -28,9 +28,9 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ProblemSection />
+      <ExplainSection />
       <FrameworkSection />
       <OutcomesSection />
-      <DifferentiatorsSection />
       <CredibilitySection />
     </>
   );

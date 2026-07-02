@@ -12,7 +12,7 @@ import { CTAGroup } from "@/components/cta/cta-group";
 export const metadata: Metadata = {
   title: "Page not found",
   description:
-    "The page you were looking for is not here. Return home or explore the writing in resources.",
+    "The page you were looking for is not here. Return home or explore the framework.",
 };
 
 export default function NotFound() {
@@ -31,13 +31,13 @@ export default function NotFound() {
             </Heading>
             <Text size="body-lg" className="text-text-secondary">
               The link may have moved or the address may be incomplete. The home
-              page and the writing in resources are the calmest places to pick
-              up the thread.
+              page and the framework are the calmest places to pick up the
+              thread.
             </Text>
             <CTAGroup>
               <Button href="/">Return home</Button>
-              <Button variant="secondary" href="/resources">
-                Explore the resources
+              <Button variant="secondary" href="/framework">
+                Explore the framework
               </Button>
             </CTAGroup>
           </Stack>

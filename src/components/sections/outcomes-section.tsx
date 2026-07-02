@@ -10,10 +10,10 @@ import { ForecastLine } from "@/components/data-viz/forecast-line";
 import { OutcomeCard } from "@/components/cards/outcome-card";
 
 const OUTCOMES: string[] = [
-  "See margin pressure forming before it reaches the P&L.",
-  "Give leadership one clear view across operations.",
-  "Spend less time explaining results and more time shaping them.",
-  "Forecast with more confidence, less guesswork.",
+  "1. Data Foundation",
+  "2. Operational Integration",
+  "3. Predictive Intelligence",
+  "4. Continuous Improvement",
 ];
 
 /**
@@ -32,17 +32,14 @@ export function OutcomesSection() {
           <Grid variant="editorial-asymmetry" className="items-center">
             <Reveal>
               <Stack gap="md">
-                <EyebrowLabel>What changes</EyebrowLabel>
+                <EyebrowLabel>What we do</EyebrowLabel>
                 <Heading
                   level={2}
                   size="heading-xl"
                   className="text-heading-lg lg:text-heading-xl"
                 >
-                  Earlier visibility changes how businesses operate.
+                  The IFA Predictive Control Framework&trade;
                 </Heading>
-                <Text size="body-lg" className="text-text-secondary">
-                  Visibility is not just informational. It changes outcomes.
-                </Text>
               </Stack>
             </Reveal>
             <Reveal delay={0.08}>

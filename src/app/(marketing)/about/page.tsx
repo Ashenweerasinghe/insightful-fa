@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
 import { Grid } from "@/components/layout/grid";
-import { Reveal } from "@/components/motion/reveal";
 import { EyebrowLabel } from "@/components/typography/eyebrow-label";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
+import dashboard1Image from "../../../../dashboard1.png";
+import aboutBeginningImage from "../../../../about begining.png";
 
 export const metadata: Metadata = {
   title: "About",
@@ -23,201 +25,178 @@ export const metadata: Metadata = {
   },
 };
 
-const PILLARS = [
-  {
-    title: "Earlier visibility",
-    description:
-      "We focus on surfacing operational and financial risk before it becomes obvious, while there is still room to respond.",
-  },
-  {
-    title: "Operational intelligence",
-    description:
-      "We work to understand the operational systems behind financial performance, not just the results they eventually report.",
-  },
-  {
-    title: "Calm strategic clarity",
-    description:
-      "We help organizations move from reactive to proactive, with structured visibility rather than more noise.",
-  },
-  {
-    title: "Human-centered sophistication",
-    description:
-      "We use intelligent systems in service of human judgment: thoughtful, responsible, and never hype-driven.",
-  },
-] as const;
-
-const PRINCIPLES = [
-  "We start by listening, then map before we measure.",
-  "We favor clarity over noise, and signals over dashboards.",
-  "We treat visibility as an ongoing practice, not a one-time report.",
-];
-
 export default function AboutPage() {
   return (
     <>
-      <Section variant="hero">
+      <Section variant="hero" className="py-[var(--section-space-md)]">
         <Container width="default">
-          <Stack gap="lg">
-            <EyebrowLabel>About</EyebrowLabel>
-            <Heading
-              level={1}
-              size="display-lg"
-              className="text-display-md lg:text-display-lg"
-            >
-              Clarity comes from seeing how a business actually works.
-            </Heading>
-            <Text size="body-lg" className="text-text-primary font-medium">
-              Stop reacting to the past. Start controlling the future.
-            </Text>
-            <Text size="body-lg" className="text-text-secondary">
-              Insightful Financial Analytics is built on a simple conviction:
-              financial performance is the visible result of operational
-              systems. When those systems are easier to see, decisions become
-              calmer, earlier, and better informed.
-            </Text>
-          </Stack>
-        </Container>
-      </Section>
-
-      <Section variant="editorial">
-        <Container width="default">
-          <Reveal>
-            <Grid variant="editorial-asymmetry">
-              <EyebrowLabel>Perspective</EyebrowLabel>
-              <Stack gap="md">
-                <Heading
-                  level={2}
-                  size="heading-xl"
-                  className="text-heading-lg lg:text-heading-xl"
-                >
-                  We think in systems, not snapshots.
-                </Heading>
-                <Text size="body-lg" className="text-text-secondary">
-                  A financial statement is a snapshot, a single frame of a
-                  system that is always moving. We pay attention to the
-                  movement: the operational complexity, the relationships
-                  between teams and workflows, and the leading indicators that
-                  shape outcomes long before they are reported.
-                </Text>
-                <Text size="body-lg" className="text-text-secondary">
-                  Bridging operations and finance is rarely about more data. It
-                  is about seeing the right signals, in relation to one another,
-                  early enough to matter.
-                </Text>
-              </Stack>
-            </Grid>
-          </Reveal>
-        </Container>
-      </Section>
-
-      <Section
-        variant="editorial"
-        className="border-border-subtle bg-background-secondary border-t"
-      >
-        <Container width="default">
-          <Stack gap="2xl">
-            <Reveal>
-              <Stack gap="md">
-                <EyebrowLabel>What guides the work</EyebrowLabel>
-                <Heading
-                  level={2}
-                  size="heading-xl"
-                  className="text-heading-lg lg:text-heading-xl"
-                >
-                  Four commitments behind every engagement.
-                </Heading>
-              </Stack>
-            </Reveal>
-            <Reveal delay={0.08}>
-              <Grid variant="grid-2">
-                {PILLARS.map((pillar) => (
-                  <Stack
-                    key={pillar.title}
-                    gap="xs"
-                    className="border-border-subtle border-t pt-[var(--space-lg)]"
-                  >
-                    <Heading level={3} size="heading-md">
-                      {pillar.title}
-                    </Heading>
-                    <Text size="body-md" className="text-text-secondary">
-                      {pillar.description}
-                    </Text>
-                  </Stack>
-                ))}
-              </Grid>
-            </Reveal>
-          </Stack>
-        </Container>
-      </Section>
-
-      <Section variant="editorial">
-        <Container width="default">
-          <Reveal>
-            <Grid variant="editorial-asymmetry">
-              <EyebrowLabel>Experience</EyebrowLabel>
-              <Stack gap="md">
-                <Heading
-                  level={2}
-                  size="heading-xl"
-                  className="text-heading-lg lg:text-heading-xl"
-                >
-                  Grounded in how operations actually run.
-                </Heading>
-                <Text size="body-lg" className="text-text-secondary">
-                  Our perspective comes from close work with the operational and
-                  financial systems that run real businesses: the workflows,
-                  hand-offs, and data that rarely appear in a single report.
-                  That grounding is what lets us connect operational reality to
-                  financial outcomes, rather than treating them as separate
-                  conversations.
-                </Text>
-              </Stack>
-            </Grid>
-          </Reveal>
-        </Container>
-      </Section>
-
-      <Section variant="editorial">
-        <Container width="narrow">
-          <Reveal>
+          <Grid variant="editorial-asymmetry" className="items-center gap-[var(--space-2xl)]">
             <Stack gap="lg">
-              <Stack gap="md">
-                <EyebrowLabel>Working style</EyebrowLabel>
-                <Heading
-                  level={2}
-                  size="heading-xl"
-                  className="text-heading-lg lg:text-heading-xl"
-                >
-                  Calm, consultative, and close to the work.
-                </Heading>
+              <EyebrowLabel>About</EyebrowLabel>
+              <Heading
+                level={1}
+                size="display-md"
+                className="text-heading-xl lg:text-display-md"
+              >
+                <span className="block">Stop Reacting to the Past.</span>
+                <span className="block">Start Controlling the Future</span>
+              </Heading>
+              <div className="max-w-[64ch] space-y-[var(--space-md)] text-left">
                 <Text size="body-lg" className="text-text-secondary">
-                  We work as a thoughtful partner rather than a vendor:
-                  measured, observant, and steady. The aim is durable clarity,
-                  not a flurry of activity.
+                  At the end of the day, every business aims to increase
+                  profitability—but most only receive their financial
+                  information at the end of the period, when it&rsquo;s too late
+                  to act. That&rsquo;s where we come in.
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
-                  We work inside the systems you already use: no
-                  rip-and-replace, no disruption to how your team operates.
+                  We give businesses clear visibility into where they are
+                  heading before the period ends. We combine AI with human
+                  financial expertise to deliver customized, actionable
+                  insights, so leaders can correct courses before it&rsquo;s too
+                  late.
                 </Text>
-              </Stack>
-              <ul className="flex flex-col">
-                {PRINCIPLES.map((principle) => (
-                  <li
-                    key={principle}
-                    className="border-border-subtle border-t py-[var(--space-sm)] first:border-t-0 first:pt-0"
-                  >
-                    <Text
-                      as="span"
-                      size="body-md"
-                      className="text-text-secondary"
-                    >
-                      {principle}
-                    </Text>
-                  </li>
-                ))}
-              </ul>
+                <Text size="body-lg" className="text-text-secondary">
+                  All of this is done using your existing systems—with no
+                  disruption to your current operations.
+                </Text>
+              </div>
             </Stack>
-          </Reveal>
+
+            <Image
+              src={dashboard1Image}
+              alt="Dashboard view showing financial visibility and operational signals"
+              className="h-auto w-full"
+              sizes="(min-width: 1024px) 55vw, 100vw"
+            />
+          </Grid>
+        </Container>
+      </Section>
+
+      <Section variant="transitional">
+        <Container width="default">
+          <Grid variant="grid-2" className="items-start">
+            <Stack gap="md">
+              <Heading
+                level={2}
+                size="heading-xl"
+                className="text-heading-lg lg:text-heading-xl"
+              >
+                Vision
+              </Heading>
+              <Text size="body-lg" className="text-text-secondary max-w-[64ch]">
+                To help organizations operate with clarity and control by
+                predicting financial outcomes early and enabling confident,
+                data-driven decisions.
+              </Text>
+            </Stack>
+
+            <Stack gap="md">
+              <Heading
+                level={2}
+                size="heading-xl"
+                className="text-heading-lg lg:text-heading-xl"
+              >
+                Mission
+              </Heading>
+              <div className="max-w-[64ch]">
+                <Text size="body-lg" className="text-text-secondary">
+                  We simplify, structure, and integrate finance so leaders can:
+                </Text>
+                <ul className="mt-[var(--space-sm)] list-disc space-y-[var(--space-xs)] pl-[var(--space-md)] text-text-secondary">
+                  <li>Detect risks early</li>
+                  <li>Act before issues escalate</li>
+                  <li>Allocate capital with confidence</li>
+                  <li>Protect margins and cash flow</li>
+                  <li>Make forward-looking business decisions</li>
+                </ul>
+              </div>
+            </Stack>
+          </Grid>
+        </Container>
+      </Section>
+
+      <Section variant="editorial">
+        <Container width="default">
+          <Grid variant="grid-2" className="items-start gap-[var(--space-2xl)]">
+            <Stack gap="md">
+              <Heading
+                level={2}
+                size="heading-xl"
+                className="text-heading-lg lg:text-heading-xl"
+              >
+                What Our Company Offers
+              </Heading>
+              <div className="max-w-[72ch] space-y-[var(--space-md)] text-left text-text-secondary">
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">1. Build or Refine the Budget</strong>
+                  <br />
+                  Establish realistic financial targets and performance
+                  expectations.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">2. Define Revenue and Cost Drivers</strong>
+                  <br />
+                  Identify the operational metrics that drive financial
+                  performance.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">3. Define Data Sources</strong>
+                  <br />
+                  Determine where financial and operational data will be
+                  collected.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">4. Gather the Data</strong>
+                  <br />
+                  Collect data from all relevant systems and business units.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">5. Clean and Integrate the Data</strong>
+                  <br />
+                  Standardize, validate, and integrate the data into a single
+                  reliable source.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">6. Build Periodic Financial Models</strong>
+                  <br />
+                  Develop financial models that forecast performance throughout
+                  the reporting period.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">7. Generate Business Unit Insights</strong>
+                  <br />
+                  Evaluate each business unit individually to identify risks,
+                  opportunities, and location-specific recommendations.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">8. Develop Action Plans</strong>
+                  <br />
+                  Convert insights into measurable action items assigned to the
+                  appropriate teams.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">9. Build and Publish Dashboards</strong>
+                  <br />
+                  Deliver customized dashboards that provide real-time visibility
+                  into financial and operational performance.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  <strong className="text-text-primary">10. Weekly Performance Reviews</strong>
+                  <br />
+                  Meet with leadership and operating managers to review results,
+                  discuss action items, gather feedback, and continuously improve
+                  forecasting accuracy.
+                </Text>
+              </div>
+            </Stack>
+
+            <Image
+              src={aboutBeginningImage}
+              alt="Illustration representing the start of the financial visibility engagement"
+              className="sticky top-[var(--space-2xl)] h-auto w-full"
+              sizes="(min-width: 1024px) 45vw, 100vw"
+            />
+          </Grid>
         </Container>
       </Section>
     </>

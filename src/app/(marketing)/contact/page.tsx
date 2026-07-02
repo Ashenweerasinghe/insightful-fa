@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
-import { Reveal } from "@/components/motion/reveal";
-import { EyebrowLabel } from "@/components/typography/eyebrow-label";
+import { Grid } from "@/components/layout/grid";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
-import { Button } from "@/components/ui/button";
-import { CTAGroup } from "@/components/cta/cta-group";
+import { ContactForm } from "@/components/contact/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -24,104 +22,64 @@ export const metadata: Metadata = {
   },
 };
 
-// Contact inbox set to connect@ (DEC-070; resolves the DEC-039 hello@ placeholder).
-const CONTACT_EMAIL = "connect@insightfulfa.com";
-const MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-  "Operational visibility: a conversation",
-)}`;
-
-const TOPICS = [
-  "Where operational signals may already exist",
-  "How earlier forecasting could surface emerging risk",
-  "Where hidden margin pressure tends to form",
-];
-
 export default function ContactPage() {
   return (
     <>
       <Section variant="hero">
-        <Container width="narrow">
-          <Stack gap="lg">
-            <EyebrowLabel>Contact</EyebrowLabel>
+        <Container width="wide">
+          <Stack gap="xl">
             <Heading
               level={1}
               size="display-lg"
               className="text-display-md lg:text-display-lg"
             >
-              When do you usually find out you&rsquo;ve missed your numbers?
+              Contact
             </Heading>
-            <Text size="body-lg" className="text-text-primary font-medium">
-              And how much time does that leave you to act on it?
-            </Text>
-            <Text size="body-lg" className="text-text-secondary">
-              We help organizations create earlier visibility into operational
-              and financial risk. There is no funnel here and nothing to sign up
-              for, just a thoughtful conversation about what your operations may
-              already be signaling.
-            </Text>
-          </Stack>
-        </Container>
-      </Section>
-
-      <Section variant="editorial">
-        <Container width="narrow">
-          <Reveal>
-            <Stack gap="xl">
-              <Stack gap="md">
+            <Grid variant="grid-2" className="items-start gap-[var(--space-2xl)]">
+              <Stack gap="lg">
                 <Heading
                   level={2}
                   size="heading-xl"
                   className="text-heading-lg lg:text-heading-xl"
                 >
-                  What a conversation looks like.
+                  Let&rsquo;s Start with a Couple of Quick Questions
                 </Heading>
                 <Text size="body-lg" className="text-text-secondary">
-                  Tell us a little about your business, and we&rsquo;ll explore
-                  where hidden operational signals may already exist. Early
-                  conversations are exploratory and unhurried, a chance to think
-                  together about what earlier visibility could look like.
+                  When do you usually find out that you&rsquo;ve missed your
+                  projections❓
+                  <br />
+                  And when you do, how much time do you have left to
+                  course-correct❓
                 </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  We help you spot issues earlier&mdash;turning your financials
+                  into a real-time navigation tool for smarter, faster
+                  decisions.
+                </Text>
+                <Heading
+                  level={3}
+                  size="heading-md"
+                  className="text-heading-md"
+                >
+                  Get Your Free Predictive Finance Blueprint
+                </Heading>
+                <Text size="body-lg" className="text-text-secondary">
+                  See how to eliminate month-end surprises using clean data,
+                  real-time visibility, and forward-looking dashboards&mdash;
+                  without disrupting your current systems.
+                </Text>
+                <ul className="list-disc space-y-[var(--space-xs)] pl-[var(--space-lg)] text-text-secondary">
+                  <li>Fix messy data so your numbers actually make sense</li>
+                  <li>Track performance as it happens&mdash;not after the fact</li>
+                  <li>Know where you&rsquo;ll land before the month ends</li>
+                </ul>
               </Stack>
 
-              <ul className="flex flex-col">
-                {TOPICS.map((topic) => (
-                  <li
-                    key={topic}
-                    className="border-border-subtle border-t py-[var(--space-sm)] first:border-t-0 first:pt-0"
-                  >
-                    <Text
-                      as="span"
-                      size="body-md"
-                      className="text-text-secondary"
-                    >
-                      {topic}
-                    </Text>
-                  </li>
-                ))}
-              </ul>
-
-              <Stack gap="sm">
-                <CTAGroup>
-                  <Button href={MAILTO}>Book a consultation</Button>
-                  <Button variant="secondary" href="/framework">
-                    Explore the framework
-                  </Button>
-                </CTAGroup>
-                <Stack gap="2xs">
-                  <Text size="body-sm" className="text-text-secondary">
-                    Prefer email? Reach us directly at
-                  </Text>
-                  <Button variant="text" href={MAILTO} className="self-start">
-                    {CONTACT_EMAIL}
-                  </Button>
-                </Stack>
-                <Text size="body-sm" className="text-text-secondary">
-                  We typically reply within one business day. No pressure, no
-                  funnel.
-                </Text>
+              <Stack gap="md" className="border-border-subtle border-t pt-[var(--space-lg)] md:border-t-0 md:border-l md:pl-[var(--space-2xl)] md:pt-0">
+                <ContactForm />
               </Stack>
-            </Stack>
-          </Reveal>
+            </Grid>
+          </Stack>
         </Container>
       </Section>
     </>

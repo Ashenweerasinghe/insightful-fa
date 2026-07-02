@@ -1,34 +1,10 @@
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
+import { Grid } from "@/components/layout/grid";
 import { Reveal } from "@/components/motion/reveal";
-import { EyebrowLabel } from "@/components/typography/eyebrow-label";
 import { Heading } from "@/components/typography/heading";
-import { FrameworkCard } from "@/components/cards/framework-card";
-
-const STEPS = [
-  {
-    step: 1,
-    title: "Observe",
-    description: "Identify operational signals and hidden variability.",
-  },
-  {
-    step: 2,
-    title: "Connect",
-    description:
-      "Map relationships between operational activity and financial outcomes.",
-  },
-  {
-    step: 3,
-    title: "Forecast",
-    description: "Detect emerging pressure areas before they compound.",
-  },
-  {
-    step: 4,
-    title: "Respond",
-    description: "Create calmer and more informed operational decision-making.",
-  },
-];
+import { Text } from "@/components/typography/text";
 
 /**
  * FrameworkSection (P3-03): the four-step method — Observe, Connect, Forecast,
@@ -43,27 +19,29 @@ export function FrameworkSection() {
       className="scroll-mt-[var(--space-2xl)]"
     >
       <Container width="default">
-        <Stack gap="2xl">
+        <Grid variant="grid-2" className="items-start">
           <Reveal>
-            <Stack gap="md">
-              <EyebrowLabel>The framework</EyebrowLabel>
-              <Heading
-                level={2}
-                size="heading-xl"
-                className="text-heading-lg lg:text-heading-xl"
-              >
-                The IFA Predictive Control Framework™
-              </Heading>
-            </Stack>
+            <Heading
+              level={2}
+              size="heading-xl"
+              className="text-heading-lg lg:text-heading-xl"
+            >
+              We build customized dashboards that tell you where your
+              business is heading&mdash;and what to do about it.
+            </Heading>
           </Reveal>
           <Reveal delay={0.08}>
-            <ol className="flex flex-col">
-              {STEPS.map((s) => (
-                <FrameworkCard key={s.step} {...s} />
-              ))}
-            </ol>
+            <Text size="body-lg" className="text-text-secondary">
+              We build customized dashboards that show businesses where they
+              are heading before month-end and what actions to take to
+              course-correct.
+              <br />
+              We combine financial expertise with AI-assisted analysis to
+              provide practical recommendations using the systems the business
+              already has.
+            </Text>
           </Reveal>
-        </Stack>
+        </Grid>
       </Container>
     </Section>
   );
