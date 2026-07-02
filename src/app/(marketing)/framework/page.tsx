@@ -62,8 +62,8 @@ export default function FrameworkPage() {
               <EyebrowLabel>The framework</EyebrowLabel>
               <Heading
                 level={1}
-                size="display-lg"
-                className="text-display-md lg:text-display-lg"
+                size="display-md"
+                className="text-heading-xl lg:text-display-md"
               >
                 The IFA Predictive Control Framework&trade;
               </Heading>

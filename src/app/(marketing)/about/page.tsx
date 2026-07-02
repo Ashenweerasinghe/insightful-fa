@@ -30,17 +30,19 @@ export default function AboutPage() {
     <>
       <Section variant="hero" className="py-[var(--section-space-md)]">
         <Container width="default">
-          <Grid variant="editorial-asymmetry" className="items-center gap-[var(--space-2xl)]">
-            <Stack gap="lg">
+          <Stack gap="xl">
+            <Stack gap="sm">
               <EyebrowLabel>About</EyebrowLabel>
               <Heading
                 level={1}
-                size="display-md"
-                className="text-heading-xl lg:text-display-md"
+                size="heading-xl"
+                className="whitespace-nowrap text-heading-lg lg:text-heading-xl"
               >
-                <span className="block">Stop Reacting to the Past.</span>
-                <span className="block">Start Controlling the Future</span>
+                Stop Reacting to the Past. Start Controlling the Future
               </Heading>
+            </Stack>
+
+            <Grid variant="editorial-asymmetry" className="items-start gap-[var(--space-2xl)]">
               <div className="max-w-[64ch] space-y-[var(--space-md)] text-left">
                 <Text size="body-lg" className="text-text-secondary">
                   At the end of the day, every business aims to increase
@@ -60,15 +62,15 @@ export default function AboutPage() {
                   disruption to your current operations.
                 </Text>
               </div>
-            </Stack>
 
-            <Image
-              src={dashboard1Image}
-              alt="Dashboard view showing financial visibility and operational signals"
-              className="h-auto w-full"
-              sizes="(min-width: 1024px) 55vw, 100vw"
-            />
-          </Grid>
+              <Image
+                src={dashboard1Image}
+                alt="Dashboard view showing financial visibility and operational signals"
+                className="h-auto w-full lg:mt-[var(--space-3xl)]"
+                sizes="(min-width: 1024px) 55vw, 100vw"
+              />
+            </Grid>
+          </Stack>
         </Container>
       </Section>
 
