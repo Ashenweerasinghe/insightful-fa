@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
@@ -5,7 +6,6 @@ import { Grid } from "@/components/layout/grid";
 import { Reveal } from "@/components/motion/reveal";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
-import { SignalTimeline } from "@/components/data-viz/signal-timeline";
 
 /**
  * ProblemSection (P3-02): calm recognition of what traditional reporting misses —
@@ -41,13 +41,14 @@ export function ProblemSection() {
             </Stack>
           </Reveal>
           <Reveal delay={0.08}>
-            <Stack gap="sm">
-              <SignalTimeline />
-              <Text size="body-sm" className="text-text-secondary">
-                An operational signal often appears well before the same problem
-                surfaces in financial reporting.
-              </Text>
-            </Stack>
+            <Image
+              src="/illustrations/problem-operational-signal.png"
+              alt="An operational signal often appears well before the same problem surfaces in financial reporting."
+              width={1536}
+              height={1024}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="h-auto w-full"
+            />
           </Reveal>
         </Grid>
       </Container>

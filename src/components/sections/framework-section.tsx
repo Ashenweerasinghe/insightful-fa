@@ -36,6 +36,7 @@ export function FrameworkSection() {
               are heading before month-end and what actions to take to
               course-correct.
               <br />
+              <br />
               We combine financial expertise with AI-assisted analysis to
               provide practical recommendations using the systems the business
               already has.

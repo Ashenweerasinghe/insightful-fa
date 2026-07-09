@@ -7,8 +7,8 @@ import { Grid } from "@/components/layout/grid";
 import { EyebrowLabel } from "@/components/typography/eyebrow-label";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
-import dashboard1Image from "../../../../dashboard1.png";
-import aboutBeginningImage from "../../../../about begining.png";
+import aboutFutureImage from "../../../../about-future.png";
+import aboutOffersImage from "../../../../about-offers.png";
 
 export const metadata: Metadata = {
   title: "About",
@@ -45,26 +45,35 @@ export default function AboutPage() {
             <Grid variant="editorial-asymmetry" className="items-start gap-[var(--space-2xl)]">
               <div className="max-w-[64ch] space-y-[var(--space-md)] text-left">
                 <Text size="body-lg" className="text-text-secondary">
-                  At the end of the day, every business aims to increase
-                  profitability—but most only receive their financial
-                  information at the end of the period, when it&rsquo;s too late
-                  to act. That&rsquo;s where we come in.
+                  Every business wants to improve profitability.
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
-                  We give businesses clear visibility into where they are
-                  heading before the period ends. We combine AI with human
-                  financial expertise to deliver customized, actionable
-                  insights, so leaders can correct courses before it&rsquo;s too
-                  late.
+                  But most businesses only see the full financial picture after
+                  the period ends &mdash; when the opportunity to act has
+                  already passed.
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
-                  All of this is done using your existing systems—with no
-                  disruption to your current operations.
+                  That&rsquo;s where IFA changes the game.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  We give business leaders clear visibility into where the
+                  company is heading before month-end. Using deep financial
+                  analytics expertise, supported by AI, we create customized
+                  dashboards that turn existing data into clear, actionable
+                  insights &mdash; helping leaders correct course before
+                  it&rsquo;s too late.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  No system replacement.No operational disruption.
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  Just earlier visibility, better decisions, and stronger
+                  financial control.
                 </Text>
               </div>
 
               <Image
-                src={dashboard1Image}
+                src={aboutFutureImage}
                 alt="Dashboard view showing financial visibility and operational signals"
                 className="h-auto w-full lg:mt-[var(--space-3xl)]"
                 sizes="(min-width: 1024px) 55vw, 100vw"
@@ -193,7 +202,7 @@ export default function AboutPage() {
             </Stack>
 
             <Image
-              src={aboutBeginningImage}
+              src={aboutOffersImage}
               alt="Illustration representing the start of the financial visibility engagement"
               className="sticky top-[var(--space-2xl)] h-auto w-full"
               sizes="(min-width: 1024px) 45vw, 100vw"

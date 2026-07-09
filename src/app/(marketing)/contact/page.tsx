@@ -42,19 +42,19 @@ export default function ContactPage() {
                   size="heading-xl"
                   className="text-heading-lg lg:text-heading-xl"
                 >
-                  Let&rsquo;s Start with a Couple of Quick Questions
+                  Let&rsquo;s Start with Two Quick Questions
                 </Heading>
                 <Text size="body-lg" className="text-text-secondary">
                   When do you usually find out that you&rsquo;ve missed your
-                  projections❓
-                  <br />
-                  And when you do, how much time do you have left to
-                  course-correct❓
+                  projections?
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
-                  We help you spot issues earlier&mdash;turning your financials
-                  into a real-time navigation tool for smarter, faster
-                  decisions.
+                  And when you do, how much time do you have left to
+                  course-correct?
+                </Text>
+                <Text size="body-lg" className="text-text-secondary">
+                  We help you spot issues earlier and turn your financials into
+                  a real-time navigation tool for smarter, faster decisions.
                 </Text>
                 <Heading
                   level={3}
@@ -63,15 +63,10 @@ export default function ContactPage() {
                 >
                   Get Your Free Predictive Finance Blueprint
                 </Heading>
-                <Text size="body-lg" className="text-text-secondary">
-                  See how to eliminate month-end surprises using clean data,
-                  real-time visibility, and forward-looking dashboards&mdash;
-                  without disrupting your current systems.
-                </Text>
                 <ul className="list-disc space-y-[var(--space-xs)] pl-[var(--space-lg)] text-text-secondary">
-                  <li>Fix messy data so your numbers actually make sense</li>
-                  <li>Track performance as it happens&mdash;not after the fact</li>
-                  <li>Know where you&rsquo;ll land before the month ends</li>
+                  <li>Fix messy data</li>
+                  <li>Track performance as it happens</li>
+                  <li>Know where you&rsquo;ll land before month-end</li>
                 </ul>
               </Stack>
 

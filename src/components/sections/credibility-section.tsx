@@ -3,7 +3,6 @@ import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
 import { Grid } from "@/components/layout/grid";
 import { Reveal } from "@/components/motion/reveal";
-import { EyebrowLabel } from "@/components/typography/eyebrow-label";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
 
@@ -18,17 +17,16 @@ export function CredibilitySection() {
       <Container width="default">
         <Grid variant="editorial-asymmetry" className="items-start">
           <Reveal>
-            <EyebrowLabel>Our perspective</EyebrowLabel>
+            <Heading
+              level={2}
+              size="heading-xl"
+              className="text-center text-heading-lg lg:text-heading-xl"
+            >
+              How We&rsquo;re Different
+            </Heading>
           </Reveal>
           <Reveal delay={0.08}>
             <Stack gap="lg">
-              <Heading
-                level={2}
-                size="heading-xl"
-                className="text-heading-lg lg:text-heading-xl"
-              >
-                How We&rsquo;re Different
-              </Heading>
               <ul className="list-disc space-y-[var(--space-xs)] pl-[var(--space-md)]">
                 <li>
                   <Text size="body-lg" className="text-text-primary">

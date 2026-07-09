@@ -3,7 +3,6 @@ import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
 import { Grid } from "@/components/layout/grid";
 import { Reveal } from "@/components/motion/reveal";
-import { EyebrowLabel } from "@/components/typography/eyebrow-label";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
 import { ForecastLine } from "@/components/data-viz/forecast-line";
@@ -32,9 +31,15 @@ export function OutcomesSection() {
           <Grid variant="editorial-asymmetry" className="items-center">
             <Reveal>
               <Stack gap="md">
-                <EyebrowLabel>What we do</EyebrowLabel>
                 <Heading
                   level={2}
+                  size="heading-xl"
+                  className="text-heading-lg lg:text-heading-xl"
+                >
+                  What We Do:
+                </Heading>
+                <Heading
+                  level={3}
                   size="heading-xl"
                   className="text-heading-lg lg:text-heading-xl"
                 >

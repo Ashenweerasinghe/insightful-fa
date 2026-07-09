@@ -30,20 +30,30 @@ export function HeroSection() {
               size="display-lg"
               className="text-display-md lg:text-display-lg"
             >
-              See the bear?
+              See the Bear?
             </Heading>
             <Text size="body-lg" className="text-text-secondary">
               <strong className="text-text-primary">
-                Most businesses don&rsquo;t&hellip; until it&rsquo;s too late.
+                Most businesses don&rsquo;t&hellip; Until it&rsquo;s too late.
               </strong>
               <br />
-              <strong className="text-text-primary">So who is this bear?</strong>
+              <br />
+              <strong className="text-text-primary">
+                So WHO/WHAT IS THIS BEAR?
+              </strong>
               <br />
               <br />
-              It&rsquo;s the month-end report. The one that tells you you missed
-              your targets - revenue dropped, costs increased, profits
-              didn&rsquo;t land. And then comes the hard part. You&rsquo;re
-              responsible for the numbers.
+              It&rsquo;s the month-end report. The one that tells you that you
+              missed your targets -
+              <br />
+              &#10060; Revenue dropped,
+              <br />
+              &#10060; Costs increased,
+              <br />
+              &#10060; Profits didn&rsquo;t land.
+              <br />
+              And then comes the hard part. You&rsquo;re responsible for the
+              numbers.
               <br />
               <br />
               Now you have to explain why you missed them.

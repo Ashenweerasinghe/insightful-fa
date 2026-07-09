@@ -82,8 +82,8 @@ export function ContactForm() {
             className="border-border-default text-signal-focus focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal-focus mt-[0.2rem] h-[var(--space-md)] w-[var(--space-md)] rounded"
           />
           <Text size="body-sm" className="text-text-secondary">
-            By submitting this form, you consent to receive email and SMS
-            communications from us as described in our Terms &amp; Conditions.
+            By submitting this form, you consent to receive email from us as
+            described in our Terms &amp; Conditions.
           </Text>
         </label>
         <button

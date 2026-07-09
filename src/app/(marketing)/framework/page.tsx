@@ -68,7 +68,7 @@ export default function FrameworkPage() {
                 The IFA Predictive Control Framework&trade;
               </Heading>
               <Text size="body-lg" className="text-text-secondary">
-                The IFA Predictive Control Framework&trade; is our proprietary
+                The IFA Predictive Control Framework<sup>&trade;</sup> is our proprietary
                 operating model. It converts fragmented financial reporting
                 into a structured, predictive control system.
                 <br />

@@ -21,7 +21,7 @@ export function HeroIllustration({
   return (
     <div className={cn("w-full", className)} aria-hidden="true">
       <Image
-        src="/illustrations/hero-campfire.webp"
+        src="/illustrations/hero-boardroom-bear.png"
         alt=""
         width={1536}
         height={1024}
