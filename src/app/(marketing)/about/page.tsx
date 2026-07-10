@@ -36,7 +36,7 @@ export default function AboutPage() {
               <Heading
                 level={1}
                 size="heading-xl"
-                className="whitespace-nowrap text-heading-lg lg:text-heading-xl"
+                className="text-heading-lg lg:text-heading-xl"
               >
                 Stop Reacting to the Past. Start Controlling the Future
               </Heading>
