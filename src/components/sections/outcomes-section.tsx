@@ -4,8 +4,6 @@ import { Stack } from "@/components/layout/stack";
 import { Grid } from "@/components/layout/grid";
 import { Reveal } from "@/components/motion/reveal";
 import { Heading } from "@/components/typography/heading";
-import { Text } from "@/components/typography/text";
-import { ForecastLine } from "@/components/data-viz/forecast-line";
 import { OutcomeCard } from "@/components/cards/outcome-card";
 
 const OUTCOMES: string[] = [
@@ -45,15 +43,6 @@ export function OutcomesSection() {
                 >
                   The IFA Predictive Control Framework&trade;
                 </Heading>
-              </Stack>
-            </Reveal>
-            <Reveal delay={0.08}>
-              <Stack gap="sm">
-                <ForecastLine />
-                <Text size="body-sm" className="text-text-secondary">
-                  A rising operational signal, caught before it crosses into
-                  financial risk.
-                </Text>
               </Stack>
             </Reveal>
           </Grid>

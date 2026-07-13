@@ -38,13 +38,22 @@ export function HeroSection() {
               </strong>
               <br />
               <br />
+              <br />
               <strong className="text-text-primary">
                 So WHO/WHAT IS THIS BEAR?
               </strong>
               <br />
               <br />
-              It&rsquo;s the month-end report. The one that tells you that you
-              missed your targets -
+              <br />
+              It&rsquo;s the{" "}
+              <strong className="text-text-primary">
+                <em>
+                  <u>Month-End Report.</u>
+                </em>
+              </strong>
+              <br />
+              <br />
+              The one that tells you that you missed your targets -
               <br />
               &#10060; Revenue dropped,
               <br />
