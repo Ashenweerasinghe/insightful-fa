@@ -28,7 +28,7 @@ export default function AboutPage() {
     <>
       <Section variant="transitional">
         <Container width="default">
-          <Grid variant="grid-2" className="items-start">
+          <Stack gap="xl" className="mx-auto max-w-[72ch]">
             <Stack gap="md">
               <Heading
                 level={2}
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 </ul>
               </div>
             </Stack>
-          </Grid>
+          </Stack>
         </Container>
       </Section>
 
@@ -116,7 +116,7 @@ export default function AboutPage() {
             <Image
               src={aboutIfaImage}
               alt="Predictive insights dashboard showing forecasts, risk alerts, and recommended actions"
-              className="h-auto w-full rounded-md shadow-medium"
+              className="h-auto w-full rounded-md shadow-medium lg:mt-[var(--space-3xl)]"
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
           </Grid>

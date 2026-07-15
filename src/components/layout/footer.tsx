@@ -100,23 +100,16 @@ export function Footer() {
             </Stack>
           </nav>
 
-          <nav aria-label="Footer terms of use and privacy policy">
-            <Stack gap="sm">
-              <ul className="flex flex-col gap-[var(--space-xs)]">
-                <li>
-                  <Link href="/term-of-use" className={footerLinkClass}>
-                    Terms of use | Privacy policy
-                  </Link>
-                </li>
-              </ul>
-            </Stack>
-          </nav>
+          <div aria-hidden="true" />
         </div>
 
-        <div className="border-border-subtle border-t py-[var(--space-lg)]">
+        <div className="border-border-subtle flex flex-col gap-[var(--space-sm)] border-t py-[var(--space-lg)] sm:flex-row sm:items-center sm:justify-between">
           <MetaText size="meta-md" className="text-text-secondary">
             © {year} Insightful Financial Analytics
           </MetaText>
+          <Link href="/term-of-use" className={footerLinkClass}>
+            Terms of use | Privacy policy
+          </Link>
         </div>
       </Container>
     </footer>
