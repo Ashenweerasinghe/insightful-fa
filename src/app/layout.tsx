@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Public_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "@/styles/globals.css";
 
 const newsreader = Newsreader({
@@ -52,7 +53,10 @@ export default function RootLayout({
       lang="en"
       className={`${newsreader.variable} ${publicSans.variable} ${ibmPlexMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
