@@ -89,28 +89,37 @@ export default function AboutPage() {
                 <br />
                 Start Controlling the Future.
               </Heading>
-              <div className="max-w-[72ch] space-y-[var(--space-md)] text-left text-text-secondary">
-                <Text size="body-lg" className="text-text-secondary">
-                  Most businesses only see the full financial picture after the
-                  period ends &mdash; when the opportunity to act has already
-                  passed.
-                </Text>
-                <Text size="body-lg" className="text-text-secondary">
-                  That&rsquo;s where{" "}
-                  <strong className="text-signal-focus font-semibold">
-                    IFA
-                  </strong>{" "}
-                  changes the game.
-                </Text>
-                <Text size="body-lg" className="text-text-secondary">
-                  We give business leaders clear visibility into where the
-                  company is heading before month-end. Using deep financial
-                  analytics expertise, supported by AI, we create customized
-                  dashboards that turn existing data into clear, actionable
-                  insights &mdash; helping leaders correct course before
-                  it&rsquo;s too late.
-                </Text>
-              </div>
+              <ul className="max-w-[72ch] space-y-[var(--space-md)] text-left text-text-secondary">
+                <li className="flex gap-[var(--space-sm)]">
+                  <span className="mt-1 shrink-0 text-signal-focus">⏳</span>
+                  <Text size="body-lg" className="text-text-secondary">
+                    Most businesses only see the full financial picture after
+                    the period ends &mdash; when the opportunity to act has
+                    already passed.
+                  </Text>
+                </li>
+                <li className="flex gap-[var(--space-sm)]">
+                  <span className="mt-1 shrink-0 text-signal-focus">🎯</span>
+                  <Text size="body-lg" className="text-text-secondary">
+                    That&rsquo;s where{" "}
+                    <strong className="text-signal-focus font-semibold">
+                      IFA
+                    </strong>{" "}
+                    changes the game.
+                  </Text>
+                </li>
+                <li className="flex gap-[var(--space-sm)]">
+                  <span className="mt-1 shrink-0 text-signal-focus">📊</span>
+                  <Text size="body-lg" className="text-text-secondary">
+                    We give business leaders clear visibility into where the
+                    company is heading before month-end. Using deep financial
+                    analytics expertise, supported by AI, we create customized
+                    dashboards that turn existing data into clear, actionable
+                    insights &mdash; helping leaders correct course before
+                    it&rsquo;s too late.
+                  </Text>
+                </li>
+              </ul>
             </Stack>
 
             <Image
@@ -136,7 +145,7 @@ export default function AboutPage() {
             <Grid variant="grid-2" className="items-start gap-[var(--space-xl)]">
               <Stack gap="sm">
                 <Text size="body-lg" className="text-text-primary font-semibold">
-                  Anticipate What&rsquo;s Next
+                  🔮 Anticipate What&rsquo;s Next
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
                   See where results are heading with predictive forecasting and
@@ -145,7 +154,7 @@ export default function AboutPage() {
               </Stack>
               <Stack gap="sm">
                 <Text size="body-lg" className="text-text-primary font-semibold">
-                  Align Your Strategy
+                  🧭 Align Your Strategy
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
                   Connect financial insights to operational drivers and
@@ -154,7 +163,7 @@ export default function AboutPage() {
               </Stack>
               <Stack gap="sm">
                 <Text size="body-lg" className="text-text-primary font-semibold">
-                  Optimize Performance
+                  📈 Optimize Performance
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
                   Identify risks and opportunities early and take action that
@@ -163,7 +172,7 @@ export default function AboutPage() {
               </Stack>
               <Stack gap="sm">
                 <Text size="body-lg" className="text-text-primary font-semibold">
-                  Outperform the Competition
+                  🏆 Outperform the Competition
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
                   Make faster, smarter decisions that create a lasting
@@ -173,10 +182,10 @@ export default function AboutPage() {
             </Grid>
             <Stack gap="sm">
               <Text size="body-lg" className="text-text-primary font-semibold">
-                No System Replacement. No Operational Disruption.
+                🛠️ No System Replacement. No Operational Disruption.
               </Text>
               <Text size="body-lg" className="text-text-primary font-semibold">
-                Just earlier visibility, better decisions, and stronger
+                💡 Just earlier visibility, better decisions, and stronger
                 financial control.
               </Text>
             </Stack>
