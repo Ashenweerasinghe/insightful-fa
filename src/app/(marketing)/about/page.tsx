@@ -28,7 +28,7 @@ export default function AboutPage() {
     <>
       <Section variant="transitional">
         <Container width="default">
-          <Stack gap="xl" className="mx-auto max-w-[72ch]">
+          <Stack gap="xl" className="max-w-[72ch]">
             <Stack gap="md">
               <Heading
                 level={2}
