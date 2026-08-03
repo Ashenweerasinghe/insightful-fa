@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-// Homepage structure + approved-copy/anchor checks (P3). Queries are scoped to
-// <main> so the shell's FooterCTA/Footer headings and links are excluded.
+// Homepage structure + approved-copy checks (P3). Queries are scoped to <main>
+// so the shell's FooterCTA/Footer headings and links are excluded.
 test.describe("homepage", () => {
   test("has exactly one h1 and the section headlines in order", async ({
     page,
@@ -11,33 +11,51 @@ test.describe("homepage", () => {
 
     const h1 = main.getByRole("heading", { level: 1 });
     await expect(h1).toHaveCount(1);
-    await expect(h1).toContainText(/see the bear/i);
+    await expect(h1).toContainText(
+      /see where your business is heading.before month-end/i,
+    );
 
     const h2s = main.getByRole("heading", { level: 2 });
-    await expect(h2s).toHaveCount(3);
+    await expect(h2s).toHaveCount(4);
     await expect(h2s.nth(0)).toContainText(
-      /explaining the problem, not managing it/i,
+      /what you don.t see is already costing you/i,
     );
-    await expect(h2s.nth(1)).toContainText(/predictive control framework/i);
-    await expect(h2s.nth(2)).toContainText(/changes how businesses operate/i);
+    await expect(h2s.nth(1)).toContainText(
+      /by the time it shows up in your financials/i,
+    );
+    await expect(h2s.nth(2)).toContainText(/predictive control framework/i);
+    await expect(h2s.nth(3)).toContainText(/the four layers/i);
 
-    // Differentiators block (P8-03) renders between Outcomes and Credibility.
     await expect(
-      main.getByText(/pair AI with experienced financial judgment/i),
+      main.getByText(/our proprietary methodology/i),
+    ).toBeVisible();
+    await expect(
+      main.getByText(/financial and non-financial data/i),
+    ).toBeVisible();
+    await expect(
+      main.getByText(
+        /operational drivers that influence business performance/i,
+      ),
+    ).toBeVisible();
+    await expect(
+      main.getByText(/turns insights into actions/i),
     ).toBeVisible();
   });
 
-  test("hero CTAs use approved language and targets", async ({ page }) => {
+  test("hero uses approved dashboard and finance-team language", async ({
+    page,
+  }) => {
     await page.goto("/");
     const main = page.getByRole("main");
 
     await expect(
-      main.getByRole("link", { name: /book a consultation/i }),
-    ).toHaveAttribute("href", "/contact");
+      main.getByText(
+        /financial and operational data into customized dashboards/i,
+      ),
+    ).toBeVisible();
     await expect(
-      main.getByRole("link", { name: /see how the system works/i }),
-    ).toHaveAttribute("href", "#framework");
-    await expect(page.locator("#framework")).toBeVisible();
+      main.getByText(/accounting firm and internal finance team/i),
+    ).toBeVisible();
   });
 
   test("content is visible under reduced motion", async ({ page }) => {

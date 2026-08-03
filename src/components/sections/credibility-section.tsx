@@ -6,10 +6,20 @@ import { Reveal } from "@/components/motion/reveal";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
 
+const COMPETITIVE_ADVANTAGES = [
+  "Earlier visibility into where your business is heading.",
+  "Customized dashboards built specifically for your business.",
+  "Financial and operational data brought together in one clear view.",
+  "AI-assisted analysis combined with experienced financial professionals.",
+  "Practical recommendations\u2014not just reports.",
+  "Works alongside your accounting firm and internal finance team.",
+  "Integrates with your existing systems without disruption.",
+  "Continuously improves through real-world feedback.",
+] as const;
+
 /**
- * CredibilitySection (P3-05): a humanizing philosophy statement. Editorial asymmetry
- * with a sparse left column for emotional decompression; the perspective is framed
- * by the eyebrow rather than a claimed founder name.
+ * CredibilitySection (P3-05): competitive advantages presented as a calm
+ * editorial list.
  */
 export function CredibilitySection() {
   return (
@@ -22,44 +32,19 @@ export function CredibilitySection() {
               size="heading-xl"
               className="text-center text-heading-lg lg:text-heading-xl"
             >
-              How We&rsquo;re Different
+              Our Competitive Advantages
             </Heading>
           </Reveal>
           <Reveal delay={0.08}>
             <Stack gap="lg">
               <ul className="list-disc space-y-[var(--space-xs)] pl-[var(--space-md)]">
-                <li>
-                  <Text size="body-lg" className="text-text-primary">
-                    We don&apos;t replace your existing systems&mdash;we integrate
-                    them.
-                  </Text>
-                </li>
-                <li>
-                  <Text size="body-lg" className="text-text-primary">
-                    We build customized dashboards tailored to your business.
-                  </Text>
-                </li>
-                <li>
-                  <Text size="body-lg" className="text-text-primary">
-                    We combine AI with experienced financial professionals.
-                  </Text>
-                </li>
-                <li>
-                  <Text size="body-lg" className="text-text-primary">
-                    We provide actionable recommendations, not just reports.
-                  </Text>
-                </li>
-                <li>
-                  <Text size="body-lg" className="text-text-primary">
-                    We help leaders make better decisions before month-end.
-                  </Text>
-                </li>
-                <li>
-                  <Text size="body-lg" className="text-text-primary">
-                    We continuously improve forecasting accuracy through real
-                    business feedback.
-                  </Text>
-                </li>
+                {COMPETITIVE_ADVANTAGES.map((advantage) => (
+                  <li key={advantage}>
+                    <Text size="body-lg" className="text-text-primary">
+                      {advantage}
+                    </Text>
+                  </li>
+                ))}
               </ul>
             </Stack>
           </Reveal>

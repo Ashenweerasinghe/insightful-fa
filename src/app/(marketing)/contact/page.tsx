@@ -42,74 +42,57 @@ export default function ContactPage() {
                   size="display-md"
                   className="text-heading-xl lg:text-display-md"
                 >
-                  Contact
+                  Free Financial Performance Assessment
                 </Heading>
                 <span className="block h-px w-16 bg-signal-focus" />
                 <Heading
                   level={2}
                   size="heading-xl"
-                  className="max-w-[12ch] text-heading-md lg:text-heading-lg"
+                  className="max-w-[16ch] text-heading-md lg:text-heading-lg"
                 >
-                  Let&rsquo;s Start with Two Quick Questions
+                  Let&rsquo;s Start with Two Simple Questions
                 </Heading>
               </Stack>
 
               <Stack gap="md">
                 <div className="flex items-start gap-[var(--space-md)]">
-                  <span className="border-signal-focus/40 text-signal-focus flex h-10 w-10 shrink-0 items-center justify-center rounded-full border bg-background-secondary">
-                    <svg
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                      className="h-5 w-5"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.8"
-                    >
-                      <circle cx="12" cy="12" r="8" />
-                      <path d="M12 7v5l3 2" />
-                    </svg>
+                  <span aria-hidden="true" className="shrink-0 text-signal-focus">
+                    📈
                   </span>
                   <Text size="body-sm" className="max-w-[38ch] text-text-primary">
-                    When do you usually find out that you&rsquo;ve missed your
-                    projections?
+                    When do you usually realize your business is off track?
                   </Text>
                 </div>
                 <div className="flex items-start gap-[var(--space-md)]">
-                  <span className="border-signal-focus/40 text-signal-focus flex h-10 w-10 shrink-0 items-center justify-center rounded-full border bg-background-secondary">
-                    <svg
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                      className="h-5 w-5"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.8"
-                    >
-                      <rect x="5" y="5" width="14" height="14" rx="2" />
-                      <path d="M8 3v4M16 3v4M5 10h14" />
-                    </svg>
+                  <span aria-hidden="true" className="shrink-0 text-signal-focus">
+                    ⏳
                   </span>
                   <Text size="body-sm" className="max-w-[38ch] text-text-primary">
-                    And when you do, how much time do you have left to
-                    course-correct?
+                    When you find out, is there still enough time to do something
+                    about it?
                   </Text>
                 </div>
               </Stack>
 
-              <Text size="body-sm" className="max-w-[56ch] text-text-secondary">
-                We help you spot issues earlier and turn your financials into a
-                real-time navigation tool for smarter, faster decisions.
-              </Text>
+              <Stack gap="md">
+                <Text size="body-sm" className="max-w-[56ch] text-text-secondary">
+                  Most businesses only discover financial problems after the
+                  reporting period has ended.
+                </Text>
+                <Text size="body-sm" className="max-w-[56ch] text-text-secondary">
+                  IFA combines accounting, financial expertise, AI-assisted
+                  analysis, and customized dashboards to help you identify
+                  problems earlier, understand where your business is heading, and
+                  make better decisions before month-end.
+                </Text>
+              </Stack>
 
               <Stack
                 gap="sm"
                 className="border-signal-focus/40 bg-background-elevated max-w-[38rem] rounded-md border p-[var(--space-lg)] shadow-soft"
               >
                 <Heading level={3} size="heading-md" className="text-body-lg">
-                  Get Your Free Predictive Finance Blueprint
+                  Free Financial Performance Assessment
                 </Heading>
                 <ul className="space-y-[var(--space-xs)] text-body-sm text-text-secondary">
                   <li className="flex items-center gap-[var(--space-sm)]">
@@ -127,7 +110,7 @@ export default function ContactPage() {
                         <path d="m4 8 2.5 2.5L12 5" />
                       </svg>
                     </span>
-                    Fix messy data
+                    Identify opportunities and emerging risks
                   </li>
                   <li className="flex items-center gap-[var(--space-sm)]">
                     <span className="text-signal-focus inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-signal-focus/50">
@@ -144,7 +127,7 @@ export default function ContactPage() {
                         <path d="m4 8 2.5 2.5L12 5" />
                       </svg>
                     </span>
-                    Track performance as it happens
+                    Understand where your business is heading before month-end
                   </li>
                   <li className="flex items-center gap-[var(--space-sm)]">
                     <span className="text-signal-focus inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-signal-focus/50">
@@ -161,7 +144,8 @@ export default function ContactPage() {
                         <path d="m4 8 2.5 2.5L12 5" />
                       </svg>
                     </span>
-                    Know where you&rsquo;ll land before month-end
+                    Receive practical recommendations to improve business
+                    performance
                   </li>
                 </ul>
               </Stack>

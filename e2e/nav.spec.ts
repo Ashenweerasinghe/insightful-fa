@@ -5,13 +5,17 @@ import { test, expect } from "@playwright/test";
 // to the banner to avoid the Footer's navigation column and the wordmark.
 const PAGES = [
   {
-    label: "Framework",
+    label: "How it works",
     path: "/framework",
-    heading: /downstream reflections/i,
+    heading: /predictive control framework/i,
   },
-  { label: "About", path: "/about", heading: /how a business actually works/i },
-  { label: "Contact", path: "/contact", heading: /missed your numbers/i },
-  { label: "Home", path: "/", heading: /see the bear/i },
+  { label: "Why We Exist", path: "/about", heading: /why we exist/i },
+  { label: "Contact", path: "/contact", heading: /contact/i },
+  {
+    label: "Home",
+    path: "/",
+    heading: /see where your business is heading/i,
+  },
 ];
 
 test.describe("primary navigation", () => {
@@ -47,29 +51,11 @@ test.describe("primary navigation", () => {
     const banner = page.getByRole("banner");
 
     await expect(
-      banner.getByRole("link", { name: "Framework", exact: true }),
+      banner.getByRole("link", { name: "How it works", exact: true }),
     ).toHaveAttribute("aria-current", "page");
     await expect(
-      banner.getByRole("link", { name: "About", exact: true }),
+      banner.getByRole("link", { name: "Why We Exist", exact: true }),
     ).not.toHaveAttribute("aria-current", "page");
-  });
-
-  test("marks Resources active on the index and on an article (DEC-040)", async ({
-    page,
-  }) => {
-    const banner = page.getByRole("banner");
-
-    await page.goto("/resources");
-    await expect(
-      banner.getByRole("link", { name: "Resources", exact: true }),
-    ).toHaveAttribute("aria-current", "page");
-
-    // isNavItemActive matches startsWith("/resources/"), so a nested article
-    // route keeps Resources marked current.
-    await page.goto("/resources/seeing-operational-risk-earlier");
-    await expect(
-      banner.getByRole("link", { name: "Resources", exact: true }),
-    ).toHaveAttribute("aria-current", "page");
   });
 
   test("404 page renders inside the marketing shell (Phase 6)", async ({

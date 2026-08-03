@@ -9,16 +9,16 @@ import { Text } from "@/components/typography/text";
 import aboutIfaImage from "../../../../about-ifa-predictive-insights.png";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Why We Exist",
   description:
-    "The philosophy behind Insightful Financial Analytics: systems thinking, earlier operational visibility, and calm strategic clarity over reactive reporting.",
+    "Why Insightful Financial Analytics exists: helping business leaders gain clarity, confidence, and stronger decisions without the stress of financial uncertainty.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About · Insightful Financial Analytics",
+    title: "Why We Exist · Insightful Financial Analytics",
     description:
-      "Why we believe clarity comes from seeing how a business actually works: systems thinking over reactive reporting.",
+      "Helping organizations maximize the value of their resources and create lasting value for the people and communities they serve.",
     type: "website",
   },
 };
@@ -28,7 +28,13 @@ export default function AboutPage() {
     <>
       <Section variant="transitional">
         <Container width="default">
-          <Stack gap="xl" className="max-w-[72ch]">
+          <Stack gap="xl" className="mx-auto max-w-[72ch]">
+            {/* Visually hidden: the page title is removed from view per design,
+                but kept for the document outline, SEO, and screen readers. */}
+            <Heading level={1} size="display-md" className="sr-only">
+              Why We Exist
+            </Heading>
+
             <Stack gap="md">
               <Heading
                 level={2}
@@ -38,9 +44,9 @@ export default function AboutPage() {
                 Vision
               </Heading>
               <Text size="body-lg" className="text-text-secondary max-w-[64ch]">
-                To give organizations the clarity and control to see financial
-                outcomes earlier, act with confidence, and shape a stronger
-                future.
+                To help organizations maximize the value of their resources so
+                they can create lasting value for their employees, customers,
+                stakeholders, and the communities they serve.
               </Text>
             </Stack>
 
@@ -52,19 +58,10 @@ export default function AboutPage() {
               >
                 Mission
               </Heading>
-              <div className="max-w-[64ch]">
-                <Text size="body-lg" className="text-text-secondary">
-                  We transform complex financial and operational data into
-                  clear, forward-looking intelligence that helps leaders:
-                </Text>
-                <ul className="mt-[var(--space-sm)] list-disc space-y-[var(--space-xs)] pl-[var(--space-md)] text-text-secondary">
-                  <li>Detect risks before they become problems</li>
-                  <li>Take action before performance falls behind</li>
-                  <li>Allocate capital with greater confidence</li>
-                  <li>Protect margins, profitability, and cash flow</li>
-                  <li>Make faster, smarter business decisions</li>
-                </ul>
-              </div>
+              <Text size="body-lg" className="text-text-secondary max-w-[64ch]">
+                To give every business leader the clarity and confidence to make
+                better decisions without the stress of financial uncertainty.
+              </Text>
             </Stack>
           </Stack>
         </Container>
@@ -75,8 +72,12 @@ export default function AboutPage() {
           <Grid variant="grid-2" className="items-start gap-[var(--space-2xl)]">
             <Stack gap="md">
               <div className="flex items-center gap-[var(--space-sm)]">
-                <Text as="span" size="body-sm" className="text-signal-focus font-semibold uppercase">
-                  About IFA
+                <Text
+                  as="span"
+                  size="body-sm"
+                  className="text-signal-focus font-semibold uppercase"
+                >
+                  Why We Exist
                 </Text>
                 <span className="h-px w-16 bg-signal-focus" />
               </div>
@@ -93,9 +94,9 @@ export default function AboutPage() {
                 <li className="flex gap-[var(--space-sm)]">
                   <span className="mt-1 shrink-0 text-signal-focus">⏳</span>
                   <Text size="body-lg" className="text-text-secondary">
-                    Most businesses only see the full financial picture after
-                    the period ends &mdash; when the opportunity to act has
-                    already passed.
+                    Most businesses only understand their financial performance
+                    after the reporting period has ended&mdash;when the
+                    opportunity to influence the outcome has already passed.
                   </Text>
                 </li>
                 <li className="flex gap-[var(--space-sm)]">
@@ -105,18 +106,27 @@ export default function AboutPage() {
                     <strong className="text-signal-focus font-semibold">
                       IFA
                     </strong>{" "}
-                    changes the game.
+                    is different.
                   </Text>
                 </li>
                 <li className="flex gap-[var(--space-sm)]">
                   <span className="mt-1 shrink-0 text-signal-focus">📊</span>
                   <Text size="body-lg" className="text-text-secondary">
-                    We give business leaders clear visibility into where the
-                    company is heading before month-end. Using deep financial
-                    analytics expertise, supported by AI, we create customized
-                    dashboards that turn existing data into clear, actionable
-                    insights &mdash; helping leaders correct course before
-                    it&rsquo;s too late.
+                    We help business leaders understand where their business is
+                    heading before month-end by combining financial and
+                    operational data, customized dashboards, AI-assisted
+                    analysis, and experienced financial professionals.
+                  </Text>
+                </li>
+                <li className="flex gap-[var(--space-sm)]">
+                  <span className="mt-1 shrink-0 text-signal-focus">🤝</span>
+                  <Text size="body-lg" className="text-text-secondary">
+                    We work collaboratively with your internal finance team and
+                    trusted accounting firms to build on a strong financial
+                    foundation. Where additional accounting expertise is needed,
+                    our network of trusted accounting partners can provide the
+                    support required to ensure reliable financial information and
+                    stronger business decisions.
                   </Text>
                 </li>
               </ul>
@@ -145,38 +155,39 @@ export default function AboutPage() {
             <Grid variant="grid-2" className="items-start gap-[var(--space-xl)]">
               <Stack gap="sm">
                 <Text size="body-lg" className="text-text-primary font-semibold">
-                  🔮 Anticipate What&rsquo;s Next
+                  🏗️ Establish a Strong Financial Foundation
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
-                  See where results are heading with predictive forecasting and
-                  scenario analysis.
+                  Create accurate accounting, reliable financial information,
+                  and data you can trust.
                 </Text>
               </Stack>
               <Stack gap="sm">
                 <Text size="body-lg" className="text-text-primary font-semibold">
-                  🧭 Align Your Strategy
+                  🔮 Predict What&rsquo;s Next
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
-                  Connect financial insights to operational drivers and
-                  business priorities.
+                  Use customized dashboards and AI-assisted analysis to identify
+                  risks and opportunities before month-end.
                 </Text>
               </Stack>
               <Stack gap="sm">
                 <Text size="body-lg" className="text-text-primary font-semibold">
-                  📈 Optimize Performance
+                  📈 Improve Business Performance
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
-                  Identify risks and opportunities early and take action that
-                  drives improvement.
+                  Turn financial insights into practical actions that improve
+                  profitability, cash flow, and operational performance.
                 </Text>
               </Stack>
               <Stack gap="sm">
                 <Text size="body-lg" className="text-text-primary font-semibold">
-                  🏆 Outperform the Competition
+                  🏆 Make Better Business Decisions
                 </Text>
                 <Text size="body-lg" className="text-text-secondary">
-                  Make faster, smarter decisions that create a lasting
-                  competitive advantage.
+                  Give leadership the confidence to make faster, smarter
+                  decisions based on reliable financial and operational
+                  information.
                 </Text>
               </Stack>
             </Grid>
@@ -185,8 +196,9 @@ export default function AboutPage() {
                 🛠️ No System Replacement. No Operational Disruption.
               </Text>
               <Text size="body-lg" className="text-text-primary font-semibold">
-                💡 Just earlier visibility, better decisions, and stronger
-                financial control.
+                💡 We work with your existing systems to deliver stronger
+                accounting, customized dashboards, and better business
+                decisions.
               </Text>
             </Stack>
           </Stack>

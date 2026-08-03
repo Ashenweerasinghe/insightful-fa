@@ -1,22 +1,40 @@
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
-import { Grid } from "@/components/layout/grid";
 import { Reveal } from "@/components/motion/reveal";
 import { Heading } from "@/components/typography/heading";
-import { OutcomeCard } from "@/components/cards/outcome-card";
+import { FrameworkCard } from "@/components/cards/framework-card";
 
-const OUTCOMES: string[] = [
-  "1. Data Foundation",
-  "2. Operational Integration",
-  "3. Predictive Intelligence",
-  "4. Continuous Improvement",
-];
+const LAYERS = [
+  {
+    step: 1,
+    title: "Data Foundation",
+    description:
+      "Build a strong financial foundation with clean, reliable, and standardized financial and operational data.",
+  },
+  {
+    step: 2,
+    title: "Operational Integration",
+    description:
+      "Connect financial information with the operational drivers that influence business performance.",
+  },
+  {
+    step: 3,
+    title: "Predictive Intelligence",
+    description:
+      "Transform financial and operational data into customized dashboards using AI-assisted analysis and experienced financial professionals to understand where the business is heading before month-end.",
+  },
+  {
+    step: 4,
+    title: "Continuous Improvement",
+    description:
+      "Create a continuous feedback loop that turns insights into actions and continuously improves business performance over time.",
+  },
+] as const;
 
 /**
- * OutcomesSection (P3-04): translates the framework into practical value. An
- * asymmetric intro pairs the headline with the interactive ForecastLine signal; four
- * approved outcomes follow as calm, hairline-bordered editorial cards.
+ * OutcomesSection (P3-04): expands the predictive control framework into its
+ * four operating layers.
  */
 export function OutcomesSection() {
   return (
@@ -25,33 +43,27 @@ export function OutcomesSection() {
       className="border-border-subtle bg-background-secondary border-t"
     >
       <Container width="default">
-        <Stack gap="2xl">
-          <Grid variant="editorial-asymmetry" className="items-center">
-            <Reveal>
-              <Stack gap="md">
-                <Heading
-                  level={2}
-                  size="heading-xl"
-                  className="text-heading-lg lg:text-heading-xl"
-                >
-                  What We Do:
-                </Heading>
-                <Heading
-                  level={3}
-                  size="heading-xl"
-                  className="text-heading-lg lg:text-heading-xl"
-                >
-                  The IFA Predictive Control Framework&trade;
-                </Heading>
-              </Stack>
-            </Reveal>
-          </Grid>
-          <Reveal delay={0.16}>
-            <ul className="grid grid-cols-1 gap-[var(--space-xl)] sm:grid-cols-2">
-              {OUTCOMES.map((statement) => (
-                <OutcomeCard key={statement} statement={statement} />
+        <Stack gap="xl">
+          <Reveal>
+            <Heading
+              level={2}
+              size="heading-xl"
+              className="text-heading-lg lg:text-heading-xl"
+            >
+              The Four Layers of the IFA Predictive Control Framework&trade;
+            </Heading>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <ol className="flex flex-col">
+              {LAYERS.map((layer) => (
+                <FrameworkCard
+                  key={layer.step}
+                  step={layer.step}
+                  title={layer.title}
+                  description={layer.description}
+                />
               ))}
-            </ul>
+            </ol>
           </Reveal>
         </Stack>
       </Container>

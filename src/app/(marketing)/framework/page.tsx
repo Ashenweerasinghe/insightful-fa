@@ -30,26 +30,101 @@ const STEPS = [
   {
     step: 1,
     title: "Data Foundation",
-    description: "Create clean, reliable, and standardized business data.",
+    description:
+      "Build a strong financial foundation with clean, reliable, and standardized financial and operational data.",
   },
   {
     step: 2,
     title: "Operational Integration",
     description:
-      "Connect financial information with operational drivers across the business.",
+      "Connect financial information with the operational drivers that influence business performance.",
   },
   {
     step: 3,
     title: "Predictive Intelligence",
     description:
-      "Use customized dashboards, AI, and financial expertise to predict business performance before month-end.",
+      "Transform financial and operational data into customized dashboards using AI-assisted analysis and experienced financial professionals to understand where the business is heading before month-end.",
   },
   {
     step: 4,
     title: "Continuous Improvement",
     description:
-      "Create a continuous feedback loop using actual results and customer feedback to refine our models and improve forecasting accuracy over time.",
+      "Create a continuous feedback loop that turns insights into actions and continuously improves business performance over time.",
   },
+] as const;
+
+const ACTION_STEPS = [
+  {
+    step: 1,
+    title: "Establish a Strong Financial Foundation",
+    description:
+      "Build on reliable financial information to support accurate analysis, forecasting, and better business decisions.",
+  },
+  {
+    step: 2,
+    title: "Define Revenue and Cost Drivers",
+    description:
+      "Identify the operational activities that drive financial performance.",
+  },
+  {
+    step: 3,
+    title: "Define Data Sources",
+    description:
+      "Identify the financial and operational data required to support decision-making.",
+  },
+  {
+    step: 4,
+    title: "Gather the Data",
+    description:
+      "Collect data from existing systems, departments, and business units.",
+  },
+  {
+    step: 5,
+    title: "Clean and Integrate the Data",
+    description:
+      "Standardize, validate, and integrate financial and operational data into a single reliable source.",
+  },
+  {
+    step: 6,
+    title: "Refine Financial Models and Forecasts",
+    description:
+      "Build on existing budgets, forecasts, and financial models\u2014or develop them where needed\u2014to project business performance throughout the reporting period.",
+  },
+  {
+    step: 7,
+    title: "Generate Business Insights",
+    description:
+      "Analyze each business unit to identify trends, risks, opportunities, and location-specific recommendations.",
+  },
+  {
+    step: 8,
+    title: "Develop Action Plans",
+    description:
+      "Convert insights into practical action plans with clear ownership and measurable outcomes.",
+  },
+  {
+    step: 9,
+    title: "Build Customized Dashboards",
+    description:
+      "Develop customized dashboards using existing financial and operational data to show where the business is heading, highlight emerging risks and opportunities, and recommend actions before month-end.",
+  },
+  {
+    step: 10,
+    title: "Review, Refine, and Improve",
+    description:
+      "Meet regularly with leadership to review results, refine recommendations, and continuously improve business performance.",
+  },
+] as const;
+
+const COMPETITIVE_ADVANTAGES = [
+  "Earlier visibility into where your business is heading.",
+  "Customized dashboards built specifically for your business.",
+  "Financial and operational data brought together in one clear view.",
+  "AI-assisted analysis combined with experienced financial professionals.",
+  "Practical recommendations\u2014not just reports.",
+  "Works alongside your accounting firm and internal finance team.",
+  "Integrates with your existing systems without disruption.",
+  "Continuously improves through real-world feedback.",
 ] as const;
 
 export default function FrameworkPage() {
@@ -88,6 +163,13 @@ export default function FrameworkPage() {
       <Section variant="editorial">
         <Container width="default">
           <Stack gap="md">
+            <Heading
+              level={2}
+              size="heading-xl"
+              className="text-heading-lg lg:text-heading-xl"
+            >
+              The Four Layers of the IFA Predictive Control Framework&trade;
+            </Heading>
             <Reveal delay={0.08}>
               <ol className="flex flex-col">
                 {STEPS.map((item) => (
@@ -115,67 +197,19 @@ export default function FrameworkPage() {
               How We Turn Data Into Action
             </Heading>
             <div className="max-w-[72ch] space-y-[var(--space-md)] text-left text-text-secondary">
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">1. Build or Refine the Budget</strong>
-                <br />
-                Establish realistic financial targets and performance
-                expectations.
-              </Text>
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">2. Define Revenue and Cost Drivers</strong>
-                <br />
-                Identify the operational metrics that drive financial
-                performance.
-              </Text>
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">3. Define Data Sources</strong>
-                <br />
-                Determine where financial and operational data will be
-                collected.
-              </Text>
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">4. Gather the Data</strong>
-                <br />
-                Collect data from all relevant systems and business units.
-              </Text>
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">5. Clean and Integrate the Data</strong>
-                <br />
-                Standardize, validate, and integrate the data into a single
-                reliable source.
-              </Text>
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">6. Build Periodic Financial Models</strong>
-                <br />
-                Develop financial models that forecast performance throughout
-                the reporting period.
-              </Text>
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">7. Generate Business Unit Insights</strong>
-                <br />
-                Evaluate each business unit individually to identify risks,
-                opportunities, and location-specific recommendations.
-              </Text>
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">8. Develop Action Plans</strong>
-                <br />
-                Convert insights into measurable action items assigned to the
-                appropriate teams.
-              </Text>
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">9. Build and Publish Predictive Dashboards</strong>
-                <br />
-                Deliver customized dashboards that show where results are
-                heading, highlight emerging risks and opportunities, and
-                identify actions to take before the reporting period ends.
-              </Text>
-              <Text size="body-lg" className="text-text-secondary">
-                <strong className="text-text-primary">10. Conduct Weekly Performance Reviews</strong>
-                <br />
-                Meet with leadership and operating managers to review results,
-                discuss action items, gather feedback, and continuously improve
-                forecasting accuracy.
-              </Text>
+              {ACTION_STEPS.map((item) => (
+                <Text
+                  key={item.step}
+                  size="body-lg"
+                  className="text-text-secondary"
+                >
+                  <strong className="text-text-primary">
+                    {item.step}. {item.title}
+                  </strong>
+                  <br />
+                  {item.description}
+                </Text>
+              ))}
             </div>
           </Stack>
         </Container>
@@ -189,41 +223,16 @@ export default function FrameworkPage() {
               size="heading-xl"
               className="text-heading-lg lg:text-heading-xl"
             >
-              How We&rsquo;re Different
+              Our Competitive Advantages
             </Heading>
             <ul className="max-w-[72ch] list-disc space-y-[var(--space-md)] pl-[var(--space-lg)] text-left text-text-secondary">
-              <li>
-                <Text size="body-lg" className="text-text-secondary">
-                  We don&apos;t replace your existing systems&mdash;we integrate
-                  them.
-                </Text>
-              </li>
-              <li>
-                <Text size="body-lg" className="text-text-secondary">
-                  We build customized dashboards tailored to your business.
-                </Text>
-              </li>
-              <li>
-                <Text size="body-lg" className="text-text-secondary">
-                  We combine AI with experienced financial professionals.
-                </Text>
-              </li>
-              <li>
-                <Text size="body-lg" className="text-text-secondary">
-                  We provide actionable recommendations, not just reports.
-                </Text>
-              </li>
-              <li>
-                <Text size="body-lg" className="text-text-secondary">
-                  We help leaders make better decisions before month-end.
-                </Text>
-              </li>
-              <li>
-                <Text size="body-lg" className="text-text-secondary">
-                  We continuously improve forecasting accuracy through real
-                  business feedback.
-                </Text>
-              </li>
+              {COMPETITIVE_ADVANTAGES.map((advantage) => (
+                <li key={advantage}>
+                  <Text size="body-lg" className="text-text-secondary">
+                    {advantage}
+                  </Text>
+                </li>
+              ))}
             </ul>
           </Stack>
         </Container>

@@ -10,8 +10,10 @@ export interface NavItem {
 export const NAV_ITEMS: readonly NavItem[] = [
   { label: "Home", href: "/" },
   { label: "How it works", href: "/framework" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Industry Focus", href: "/industry-focus" },
+  { label: "How We Use AI", href: "/how-we-use-ai" },
+  { label: "Why We Exist", href: "/about" },
+  { label: "Get Clarity", href: "/contact" },
 ];
 
 /**
