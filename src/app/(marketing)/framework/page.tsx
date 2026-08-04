@@ -144,10 +144,12 @@ export default function FrameworkPage() {
               </Heading>
               <Text size="body-lg" className="text-text-secondary">
                 The IFA Predictive Control Framework<sup>&trade;</sup> is our proprietary
-                operating model. It converts fragmented financial reporting
-                into a structured, predictive control system.
+                methodology.
                 <br />
-                It is built on four integrated layers:
+                It combines financial and non-financial data, customized
+                dashboards, AI-assisted analysis, and continuous improvement
+                into a structured system that helps businesses understand where
+                they are heading before month-end.
               </Text>
             </Stack>
             <Image
