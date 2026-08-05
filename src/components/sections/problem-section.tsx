@@ -21,6 +21,16 @@ export function ProblemSection() {
       <Container width="default">
         <Grid variant="grid-2" className="items-center">
           <Reveal>
+            <Image
+              src="/illustrations/problem-operational-signal.png"
+              alt="An operational signal often appears well before the same problem surfaces in financial reporting."
+              width={1536}
+              height={1024}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="h-auto w-full"
+            />
+          </Reveal>
+          <Reveal delay={0.08}>
             <Stack gap="md">
               <Heading
                 level={2}
@@ -39,16 +49,6 @@ export function ProblemSection() {
                 &#10060; Revenue underperforming expectations
               </Text>
             </Stack>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <Image
-              src="/illustrations/problem-operational-signal.png"
-              alt="An operational signal often appears well before the same problem surfaces in financial reporting."
-              width={1536}
-              height={1024}
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="h-auto w-full"
-            />
           </Reveal>
         </Grid>
       </Container>
