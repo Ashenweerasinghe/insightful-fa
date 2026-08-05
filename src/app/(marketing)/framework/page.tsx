@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
-import { Grid } from "@/components/layout/grid";
 import { Reveal } from "@/components/motion/reveal";
 import { EyebrowLabel } from "@/components/typography/eyebrow-label";
 import { Heading } from "@/components/typography/heading";
@@ -130,10 +129,10 @@ const COMPETITIVE_ADVANTAGES = [
 export default function FrameworkPage() {
   return (
     <>
-      <Section variant="hero">
-        <Container width="wide">
-          <Grid variant="editorial-asymmetry" className="items-center">
-            <Stack gap="lg">
+      <Section variant="transitional">
+        <Container width="default">
+          <Stack gap="xl" className="mx-auto max-w-[72ch]">
+            <Stack gap="md">
               <EyebrowLabel>The framework</EyebrowLabel>
               <Heading
                 level={1}
@@ -142,23 +141,20 @@ export default function FrameworkPage() {
               >
                 The IFA Predictive Control Framework&trade;
               </Heading>
+            </Stack>
+            <Stack gap="md">
               <Text size="body-lg" className="text-text-secondary">
-                The IFA Predictive Control Framework<sup>&trade;</sup> is our proprietary
-                methodology.
-                <br />
+                The IFA Predictive Control Framework<sup>&trade;</sup> is our
+                proprietary methodology.
+              </Text>
+              <Text size="body-lg" className="text-text-secondary">
                 It combines financial and non-financial data, customized
                 dashboards, AI-assisted analysis, and continuous improvement
                 into a structured system that helps businesses understand where
                 they are heading before month-end.
               </Text>
             </Stack>
-            <Image
-              src={structure2Image}
-              alt="IFA Predictive Control Framework structure"
-              className="h-auto w-full"
-              sizes="(min-width: 1024px) 60vw, 100vw"
-            />
-          </Grid>
+          </Stack>
         </Container>
       </Section>
 
@@ -185,6 +181,19 @@ export default function FrameworkPage() {
               </ol>
             </Reveal>
           </Stack>
+        </Container>
+      </Section>
+
+      <Section variant="editorial">
+        <Container width="wide">
+          <Reveal>
+            <Image
+              src={structure2Image}
+              alt="IFA Predictive Control Framework structure"
+              className="mx-auto h-auto w-full"
+              sizes="(min-width: 1024px) 80vw, 100vw"
+            />
+          </Reveal>
         </Container>
       </Section>
 
