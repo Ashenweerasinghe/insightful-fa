@@ -111,12 +111,20 @@ export default function AboutPage() {
                 </li>
                 <li className="flex gap-[var(--space-sm)]">
                   <span className="mt-1 shrink-0 text-signal-focus">📊</span>
-                  <Text size="body-lg" className="text-text-secondary">
-                    We help business leaders understand where their business is
-                    heading before month-end by combining financial and
-                    operational data, customized dashboards, AI-assisted
-                    analysis, and experienced financial professionals.
-                  </Text>
+                  <div className="space-y-[var(--space-md)]">
+                    <Text size="body-lg" className="text-text-secondary">
+                      We create customized dashboards that combine your financial
+                      and operational data to show where your business is heading
+                      before month-end&mdash;not after it.
+                    </Text>
+                    <Text size="body-lg" className="text-text-secondary">
+                      Using AI-assisted analysis, we organize and analyze large
+                      volumes of business data, while our experienced financial
+                      professionals provide the interpretation, business context,
+                      and recommendations that turn data into actionable
+                      insights.
+                    </Text>
+                  </div>
                 </li>
                 <li className="flex gap-[var(--space-sm)]">
                   <span className="mt-1 shrink-0 text-signal-focus">🤝</span>
