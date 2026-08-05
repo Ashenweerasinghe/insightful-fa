@@ -1,7 +1,9 @@
+import Image from "next/image";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
+import bearImage from "../../../Bear Image.png";
 
 /**
  * HeroSection (P3-01): the page opener. Carries the single <h1>. Rendered
@@ -49,7 +51,15 @@ export function HeroSection() {
               <Text size="body-lg">Now you have to explain why you missed them.</Text>
             </div>
           </div>
-          <div aria-hidden="true" />
+          <div className="flex items-start justify-center md:justify-end">
+            <Image
+              src={bearImage}
+              alt="A bear looming over scattered financial reports"
+              priority
+              className="h-auto w-full"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
+          </div>
         </div>
       </Container>
     </Section>
