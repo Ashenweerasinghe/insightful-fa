@@ -167,10 +167,10 @@ export default function FrameworkPage() {
           <Stack gap="md">
             <Heading
               level={2}
-              size="heading-md"
-              className="text-heading-md"
+              size="heading-xl"
+              className="text-heading-lg lg:text-heading-xl"
             >
-              The Four Layers of the IFA Predictive Control Framework&trade;
+              The Four Layers of the IFA PCF&trade;
             </Heading>
             <Reveal delay={0.08}>
               <ol className="flex flex-col">
