@@ -7,9 +7,8 @@ import bearImage from "../../../Bear Image.png";
 
 /**
  * HeroSection (P3-01): the page opener. Carries the single <h1>. Rendered
- * eagerly (no Reveal) because it is above the fold. The left column carries the
- * narrative; the right column is intentionally reserved for a forthcoming
- * illustration.
+ * eagerly (no Reveal) because it is above the fold. On desktop the illustration
+ * sits on the left and the narrative on the right; on mobile the heading leads.
  */
 export function HeroSection() {
   return (
@@ -19,7 +18,7 @@ export function HeroSection() {
     >
       <Container width="wide">
         <div className="grid grid-cols-1 gap-[var(--space-xl)] md:grid-cols-2 md:gap-[var(--space-2xl)]">
-          <div className="space-y-[var(--space-md)]">
+          <div className="space-y-[var(--space-md)] md:order-2">
             <Heading level={1} size="display-md" className="text-text-primary">
               See the Bear?
             </Heading>
@@ -51,7 +50,7 @@ export function HeroSection() {
               <Text size="body-lg">Now you have to explain why you missed them.</Text>
             </div>
           </div>
-          <div className="flex items-start justify-center md:justify-end">
+          <div className="flex items-start justify-center md:order-1 md:justify-start">
             <Image
               src={bearImage}
               alt="A bear looming over scattered financial reports"
