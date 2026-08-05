@@ -3,8 +3,6 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { ProblemSection } from "@/components/sections/problem-section";
 import { ExplainSection } from "@/components/sections/explain-section";
 import { SeeAheadSection } from "@/components/sections/see-ahead-section";
-import { FrameworkSection } from "@/components/sections/framework-section";
-import { OutcomesSection } from "@/components/sections/outcomes-section";
 
 export const metadata: Metadata = {
   title: {
@@ -31,8 +29,6 @@ export default function HomePage() {
       <ProblemSection />
       <ExplainSection />
       <SeeAheadSection />
-      <FrameworkSection />
-      <OutcomesSection />
     </>
   );
 }

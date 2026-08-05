@@ -1,7 +1,9 @@
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Grid } from "@/components/layout/grid";
+import { Stack } from "@/components/layout/stack";
 import { Reveal } from "@/components/motion/reveal";
+import { EyebrowLabel } from "@/components/typography/eyebrow-label";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
 
@@ -16,13 +18,16 @@ export function SeeAheadSection() {
       <Container width="wide">
         <Grid variant="grid-2" className="items-start">
           <Reveal>
-            <Heading
-              level={2}
-              size="heading-xl"
-              className="text-heading-lg lg:text-heading-xl text-text-primary"
-            >
-              See where your business is heading&mdash;before month-end
-            </Heading>
+            <Stack gap="md">
+              <EyebrowLabel>What we do</EyebrowLabel>
+              <Heading
+                level={2}
+                size="heading-xl"
+                className="text-heading-lg lg:text-heading-xl text-text-primary"
+              >
+                See where your business is heading&mdash;before month-end
+              </Heading>
+            </Stack>
           </Reveal>
           <Reveal delay={0.08}>
             <div className="max-w-[36rem] space-y-[var(--space-md)] text-text-secondary">
