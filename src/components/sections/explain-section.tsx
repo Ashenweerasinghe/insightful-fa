@@ -14,6 +14,14 @@ export function ExplainSection() {
       <Container width="default">
         <Grid variant="grid-2" className="items-center">
           <Reveal>
+            <Image
+              src={search2Image}
+              alt="Operational risk review"
+              className="h-auto w-full"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
+          </Reveal>
+          <Reveal delay={0.08}>
             <Stack gap="md">
               <Heading
                 level={2}
@@ -32,14 +40,6 @@ export function ExplainSection() {
                 We change that.
               </Text>
             </Stack>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <Image
-              src={search2Image}
-              alt="Operational risk review"
-              className="h-auto w-full"
-              sizes="(min-width: 768px) 50vw, 100vw"
-            />
           </Reveal>
         </Grid>
       </Container>
