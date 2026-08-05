@@ -167,8 +167,8 @@ export default function FrameworkPage() {
           <Stack gap="md">
             <Heading
               level={2}
-              size="heading-xl"
-              className="text-heading-lg lg:text-heading-xl"
+              size="heading-md"
+              className="text-heading-md"
             >
               The Four Layers of the IFA Predictive Control Framework&trade;
             </Heading>
