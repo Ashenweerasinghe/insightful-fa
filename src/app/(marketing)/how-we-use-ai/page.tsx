@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Stack } from "@/components/layout/stack";
 import { Grid } from "@/components/layout/grid";
 import { Heading } from "@/components/typography/heading";
 import { Text } from "@/components/typography/text";
+import dashboardImage from "../../../../Dashboard Image.png";
 
 export const metadata: Metadata = {
   title: "How We Use AI",
@@ -179,6 +181,17 @@ export default function HowWeUseAiPage() {
               </Text>
             </Stack>
           </Stack>
+        </Container>
+      </Section>
+
+      <Section variant="editorial">
+        <Container width="wide">
+          <Image
+            src={dashboardImage}
+            alt="Customized financial and operational dashboard"
+            className="mx-auto h-auto w-full"
+            sizes="(min-width: 1024px) 80vw, 100vw"
+          />
         </Container>
       </Section>
     </>
