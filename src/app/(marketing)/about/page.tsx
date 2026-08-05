@@ -69,7 +69,10 @@ export default function AboutPage() {
 
       <Section variant="editorial">
         <Container width="default">
-          <Grid variant="grid-2" className="items-start gap-[var(--space-2xl)]">
+          <Grid
+            variant="editorial-asymmetry"
+            className="items-start gap-[var(--space-2xl)]"
+          >
             <Stack gap="md">
               <div className="flex items-center gap-[var(--space-sm)]">
                 <Text
@@ -143,7 +146,7 @@ export default function AboutPage() {
             <Image
               src={aboutIfaImage}
               alt="Predictive insights dashboard showing forecasts, risk alerts, and recommended actions"
-              className="h-auto w-full rounded-md shadow-medium lg:mt-[var(--space-3xl)]"
+              className="h-auto w-full rounded-md shadow-medium lg:self-center"
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
           </Grid>
